@@ -196,7 +196,7 @@ stuffTab:CreateButton({
 
 local keyTab = Window:CreateTab("Keyboards")
 keyTab:CreateButton({
- Name = "Byte Keyboard (Broken)",
+ Name = "Byte Keyboard",
  Callback = function()
   return loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/ByteKeyboard.lua"))()
  end
@@ -223,37 +223,37 @@ keyTab:CreateButton({
 if game.PlaceId == 17574618959 then
  local genTab = Window:CreateTab("Genesis")
  genTab:CreateButton({
-  Name = "+︱Genesis Krystal Dance",
+  Name = "+︱Krystal Dance",
   Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Krystal%20Dance"))()
   end
  })
  genTab:CreateButton({
-  Name = "Genesis Neptunian V",
+  Name = "+︱Neptunian V",
   Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Neptunian%20V"))()
   end
  })
  genTab:CreateButton({
-  Name = "Genesis Sin Dragon",
+  Name = "+︱Sin Dragon",
   Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Sin%20Dragon"))()
   end
  })
  genTab:CreateButton({
-  Name = "Genesis Goner",
+  Name = "+︱Goner",
   Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Goner"))()
   end
  })
  genTab:CreateButton({
-  Name = "Genesis Ban Hammer",
+  Name = "+︱Ban Hammer",
   Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Ban%20Hammer"))()
   end
  })
  genTab:CreateButton({
-  Name = "Genesis Lightning Cannon",
+  Name = "+︱Lightning Cannon",
   Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Lightning%20Cannon"))()
   end
@@ -275,7 +275,7 @@ if game.PlaceId == 17574618959 then
  HatsTab:CreateButton({
   Name = "Respawn",
   Callback = function()
-   game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -rs")
+   game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -re")
   end
  })
  HatsTab:CreateButton({
