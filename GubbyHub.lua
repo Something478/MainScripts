@@ -1,5 +1,46 @@
+--- // ==== Blacklisted ==== \\ --- 
+
+local Players = game:GetService("Players")
+
+local function notif(str, dur)
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Service";
+        Text = str;
+        Duration = dur or 3;
+    })
+end
+
+local TAG_NAME = "Blacklisted"
+local TARGET_USERNAMES = { "Username1", "Username2" } -- Add more here
+local TargetLookup = {}
+for _, name in pairs(TARGET_USERNAMES) do
+    TargetLookup[name] = true
+end
+
+local function Blacklist(player)
+    if player.Character then
+        if player.Character:FindFirstChild("Head") and player.Character.Head:FindFirstChild(TAG_NAME) then
+            return
+        end
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "From ChillbyteHD";
+            Text = "You Are Blacklisted by the owner! sorry! :(";
+            Duration = 3;
+        })
+    end
+end
+
+for _, player in pairs(Players:GetPlayers()) do
+    if TargetLookup[player.Name] then
+        Blacklist(player)
+        return
+    end
+end
+
+--- // ==== DevTag ==== \\ ---
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/DevTag.lua"))()
 
+--- // ==== Rayfield ==== \\ ---
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
 local Window = Rayfield:CreateWindow({
  Name = "Gubby hub [Official]",
