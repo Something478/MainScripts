@@ -83,7 +83,7 @@ readTab:CreateParagraph({
 })
 readTab:CreateParagraph({
  Title = "My Discord:",
- Content = "LazyGuyLOL"
+ Content = "ChillbyteHD"
 })
 
 local homeTab = Window:CreateTab("Home")
