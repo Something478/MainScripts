@@ -10,7 +10,7 @@ DisableRayfieldPrompts = false,
 DisableBuildWarnings = false,
 ConfigurationSaving = {
 Enabled = true,
-FolderName = "GubbyHubOfficial",
+FolderName = "BreezeHub",
 FileName = "Settings"
 },
 Discord = {
