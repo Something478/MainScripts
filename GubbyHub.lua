@@ -1,4 +1,4 @@
---- // ==== Blacklisted ==== \\ --- 
+--- // ==== Blacklist ==== \\ --- 
 
 local Players = game:GetService("Players")
 
@@ -11,7 +11,7 @@ local function notif(str, dur)
 end
 
 local TAG_NAME = "Blacklisted"
-local TARGET_USERNAMES = { "Username1", "Username2", "IdkMyNameBro_012" } -- Add more here
+local TARGET_USERNAMES = { "Username1", "Username2" } -- Add more here
 local TargetLookup = {}
 for _, name in pairs(TARGET_USERNAMES) do
     TargetLookup[name] = true
