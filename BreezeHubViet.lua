@@ -24,8 +24,8 @@ local function Blacklist(player)
             return
         end
         game:GetService("StarterGui"):SetCore("SendNotification", {
-            Title = "From ChillbyteHD";
-            Text = "You Are Blacklisted by the owner, sorry! :(";
+            Title = "Từ ChillbyteHD";
+            Text = "Bạn đã bị chủ sở hữu đưa vào danh sách đen, xin lỗi! :(";
             Duration = 3;
         })
     end
