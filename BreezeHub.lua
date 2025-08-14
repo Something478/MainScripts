@@ -29,14 +29,13 @@ mainTab:CreateButton({
     end
 })
 local Section = mainTab:CreateSection("Any hero")
-
-anyTab:CreateButton({
+mainTab:CreateButton({
     Name = "Trashcan Man (By Friedpotato)",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/yes1nt/yes/refs/heads/main/Trashcan%20Man", true))()
     end
 })
-anyTab:CreateButton({
+mainTab:CreateButton({
     Name = "Flight Tool (By Friedpotato)",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/yes1nt/yes/refs/heads/main/Flight%20Tool%20Obfuscated.txt", true))()
