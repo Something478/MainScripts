@@ -20,15 +20,16 @@ local Window = Rayfield:CreateWindow({
     KeySystem = false
 })
 
-local fpsTab = Window:CreateTab("FPS Booster")
-fpsTab:CreateButton({
-    Name = "FPS Booster︱TSB",
+local mainTab = Window:CreateTab("Main")
+local Section = mainTab:CreateSection("FPS")
+mainTab:CreateButton({
+    Name = "FPS Booster",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/MerebennieOfficial/ExoticJn/refs/heads/main/FpsBooster"))()
     end
 })
+local Section = mainTab:CreateSection("Any hero")
 
-local anyTab = Window:CreateTab("Any hero")
 anyTab:CreateButton({
     Name = "Trashcan Man (By Friedpotato)",
     Callback = function()
@@ -84,6 +85,30 @@ sweatTab:CreateButton({
     end
 })
 sweatTab:CreateButton({
+    Name = "Minos Prime",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-Minos-Prime-Custom-Moveset-24060"))()
+    end
+})
+sweatTab:CreateButton({
+    Name = "A-Train moveset",
+    Callback = function()
+        getgenv().settings = {
+            morph = { enabled = false, dontchangeskincolor = false },
+            ult_forcewalkspeed = true,
+            ult_walkspeed = 60,
+            tp_duration = 0.15
+        }
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletfan2007/ATrainSounds/refs/heads/main/ATrain.lua"))()
+    end
+})
+sweatTab:CreateButton({
+    Name = "Goku Moveset",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-Hero-hunter-moveset-into-OP-goku-moveset-17468"))()
+    end
+})
+sweatTab:CreateButton({
     Name = "Void Reaper (By Friedpotato)",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/yes1nt/yes/refs/heads/main/Void%20Reaper%20Obfuscated.txt"))()
@@ -111,23 +136,4 @@ sweatTab:CreateButton({
 sweatTab:CreateParagraph({
     Title = "NOTICE!",
     Content = "!! Chainsaw man will lag low-performing devices !!"
-})
-
-sweatTab:CreateButton({
-    Name = "A-Train moveset",
-    Callback = function()
-        getgenv().settings = {
-            morph = { enabled = false, dontchangeskincolor = false },
-            ult_forcewalkspeed = true,
-            ult_walkspeed = 60,
-            tp_duration = 0.15
-        }
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletfan2007/ATrainSounds/refs/heads/main/ATrain.lua"))()
-    end
-})
-sweatTab:CreateButton({
-    Name = "Goku Moveset",
-    Callback = function()
-        loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-Hero-hunter-moveset-into-OP-goku-moveset-17468"))()
-    end
 })
