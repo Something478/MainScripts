@@ -30,13 +30,13 @@ fpsTab:CreateButton({
 
 local anyTab = Window:CreateTab("Any hero")
 anyTab:CreateButton({
-    Name = "Trashcan Man",
+    Name = "Trashcan Man (By Friedpotato)",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/yes1nt/yes/refs/heads/main/Trashcan%20Man", true))()
     end
 })
 anyTab:CreateButton({
-    Name = "Flight Tool",
+    Name = "Flight Tool (By Friedpotato)",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/yes1nt/yes/refs/heads/main/Flight%20Tool%20Obfuscated.txt", true))()
     end
@@ -76,15 +76,15 @@ saiTab:CreateButton({
 })
 
 local sweatTab = Window:CreateTab("For Garou")
-local Section = sweatTab:CreateSection("FriedPotato's")
+
 sweatTab:CreateButton({
-    Name = "Teleport Guy",
+    Name = "Teleport Guy (By Friedpotato)",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/yes1nt/yes/refs/heads/main/Teleport%20Guy.txt", true))()
     end
 })
 sweatTab:CreateButton({
-    Name = "Void Reaper",
+    Name = "Void Reaper (By Friedpotato)",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/yes1nt/yes/refs/heads/main/Void%20Reaper%20Obfuscated.txt"))()
     end
@@ -94,7 +94,7 @@ sweatTab:CreateParagraph({
     Content = "Void reaper can't void anymore :("
 })
 sweatTab:CreateButton({
-    Name = "Chainsaw Man",
+    Name = "Chainsaw Man (By Friedpotato)",
     Callback = function()
         getgenv().RunSpeed = 100
         getgenv().RunJump = 100
@@ -113,7 +113,6 @@ sweatTab:CreateParagraph({
     Content = "!! Chainsaw man will lag low-performing devices !!"
 })
 
-local SectionOther = sweatTab:CreateSection("Other stuff")
 sweatTab:CreateButton({
     Name = "A-Train moveset",
     Callback = function()
