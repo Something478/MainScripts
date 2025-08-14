@@ -1,4 +1,4 @@
---- // ==== Blacklist ==== \\ ---
+--- // ==== Danh sách đen ==== \\ ---
 local Players = game:GetService("Players")
 
 local function notif(str, dur)
@@ -38,7 +38,7 @@ for _, player in pairs(Players:GetPlayers()) do
     end
 end
 
---- // ==== DevTag ==== \\ ---
+--- // ==== Thẻ nhà phát triển ==== \\ ---
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/DevTag.lua"))()
 
 
