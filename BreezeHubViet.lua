@@ -1,8 +1,9 @@
 --- // ==== Rayfield ==== \\ ---
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
+
 local Window = Rayfield:CreateWindow({
-    Name = "Breeze hub",
-    LoadingTitle = "Breeze hub",
+    Name = "Trung tâm Breeze",
+    LoadingTitle = "Trung tâm Breeze",
     LoadingSubtitle = "Bởi ChillbyteHD",
     Theme = "Amethyst",
     ToggleUIKeybind = Enum.KeyCode.B,
@@ -10,10 +11,12 @@ local Window = Rayfield:CreateWindow({
     DisableBuildWarnings = false,
     ConfigurationSaving = {
         Enabled = true,
-        FolderName = "TrungTâmGió",
-        FileName = "Settings"
+        FolderName = "TrungTamBreeze",
+        FileName = "CaiDat"
     },
-    Discord = {Enabled = false},
+    Discord = {
+        Enabled = false
+    },
     KeySystem = false
 })
 
@@ -25,15 +28,15 @@ fpsTab:CreateButton({
     end
 })
 
-local anyTab = Window:CreateTab("Bất kỳ hero nào")
+local anyTab = Window:CreateTab("Bất kỳ anh hùng nào")
 anyTab:CreateButton({
-    Name = "Người Thùng Rác",
+    Name = "Người thùng rác (Bởi Friedpotato)",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/yes1nt/yes/refs/heads/main/Trashcan%20Man", true))()
     end
 })
 anyTab:CreateButton({
-    Name = "Công cụ bay",
+    Name = "Công cụ bay (Bởi Friedpotato)",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/yes1nt/yes/refs/heads/main/Flight%20Tool%20Obfuscated.txt", true))()
     end
@@ -41,7 +44,7 @@ anyTab:CreateButton({
 
 local saiTab = Window:CreateTab("Dành cho Saitama")
 saiTab:CreateButton({
-    Name = "Gojo Moveset",
+    Name = "Bộ chiêu Gojo",
     Callback = function()
         getgenv().FatalCombatSkillLayout = true
         getgenv().MovesetReachSound = true
@@ -49,49 +52,48 @@ saiTab:CreateButton({
     end
 })
 saiTab:CreateButton({
-    Name = "Golden Head Moveset",
+    Name = "Bộ chiêu Đầu vàng",
     Callback = function()
         getgenv().stand = false
         getgenv().ken = false
         getgenv().Spawn = false
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Saitama%20to%20golden%20sigma'))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Saitama%20to%20golden%20sigma"))()
     end
 })
 saiTab:CreateParagraph({
-    Title = "Giải thích Golden Head:",
-    Content = "Khi Ultimate được kích hoạt, có 60% cơ hội thành công và 40% cơ hội thất bại và nhận Death Counter."
+    Title = "Giải thích Đầu vàng:",
+    Content = "Khi kích hoạt ulti sẽ có 60% nhận được và 40% mất và nhận bộ đếm tử vong."
 })
 saiTab:CreateButton({
-    Name = "Shinji Moveset",
+    Name = "Bộ chiêu Shinji",
     Callback = function()
         getgenv().speedtools = true
         getgenv().speedpunch = true
         getgenv().dance = false
         getgenv().night = false
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Shinji%20tp%20exploit'))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Shinji%20tp%20exploit"))()
     end
 })
 
 local sweatTab = Window:CreateTab("Dành cho Garou")
-local Section = sweatTab:CreateSection("FriedPotato's")
 sweatTab:CreateButton({
-    Name = "Dịch chuyển nhân vật",
+    Name = "Người dịch chuyển (Bởi Friedpotato)",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/yes1nt/yes/refs/heads/main/Teleport%20Guy.txt", true))()
     end
 })
 sweatTab:CreateButton({
-    Name = "Void Reaper",
+    Name = "Kẻ gặt hư vô (Bởi Friedpotato)",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/yes1nt/yes/refs/heads/main/Void%20Reaper%20Obfuscated.txt"))()
     end
 })
 sweatTab:CreateParagraph({
-    Title = "Thông báo!",
-    Content = "Void Reaper không thể sử dụng Void nữa :("
+    Title = "Chú ý!:",
+    Content = "Kẻ gặt hư vô không thể dịch chuyển vào hư vô nữa :("
 })
 sweatTab:CreateButton({
-    Name = "Chainsaw Man",
+    Name = "Người cưa xích (Bởi Friedpotato)",
     Callback = function()
         getgenv().RunSpeed = 100
         getgenv().RunJump = 100
@@ -106,16 +108,14 @@ sweatTab:CreateButton({
     end
 })
 sweatTab:CreateParagraph({
-    Title = "THÔNG BÁO!",
-    Content = "!! Chainsaw Man có thể làm lag thiết bị yếu !!"
+    Title = "CHÚ Ý!",
+    Content = "!! Người cưa xích sẽ làm lag thiết bị yếu !!"
 })
-
-local SectionOther = sweatTab:CreateSection("Các tính năng khác")
 sweatTab:CreateButton({
-    Name = "A-Train Moveset",
+    Name = "Bộ chiêu A-Train",
     Callback = function()
         getgenv().settings = {
-            morph = {enabled = false, dontchangeskincolor = false},
+            morph = { enabled = false, dontchangeskincolor = false },
             ult_forcewalkspeed = true,
             ult_walkspeed = 60,
             tp_duration = 0.15
@@ -124,7 +124,7 @@ sweatTab:CreateButton({
     end
 })
 sweatTab:CreateButton({
-    Name = "Goku Moveset",
+    Name = "Bộ chiêu Goku",
     Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-Hero-hunter-moveset-into-OP-goku-moveset-17468"))()
     end
