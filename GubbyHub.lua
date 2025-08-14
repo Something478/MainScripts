@@ -1,5 +1,4 @@
---- // ==== Blacklist ==== \\ --- 
-
+--- // ==== Blacklist ==== \\ ---
 local Players = game:GetService("Players")
 
 local function notif(str, dur)
@@ -10,9 +9,11 @@ local function notif(str, dur)
     })
 end
 
+local TARGET_USERNAMES = loadstring(game:HttpGet("https://yourdomain.com/blacklist.lua"))()
+
 local TAG_NAME = "Blacklisted"
-local TARGET_USERNAMES = { "Username1", "Username2" } -- Add more here
 local TargetLookup = {}
+
 for _, name in pairs(TARGET_USERNAMES) do
     TargetLookup[name] = true
 end
