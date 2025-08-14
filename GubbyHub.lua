@@ -9,7 +9,7 @@ local function notif(str, dur)
     })
 end
 
-local TARGET_USERNAMES = loadstring(game:HttpGet("https://yourdomain.com/blacklist.lua"))()
+local TARGET_USERNAMES = loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/Blacklist.lua"))()
 
 local TAG_NAME = "Blacklisted"
 local TargetLookup = {}
