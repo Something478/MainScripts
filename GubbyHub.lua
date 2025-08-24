@@ -1,5 +1,3 @@
---- // ==== If u skid this I'm gonna skid your mom ==== \\ ---
-
 --- // ==== Blacklist ==== \\ ---
 
 local function notif(str, dur)
