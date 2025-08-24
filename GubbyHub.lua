@@ -6,30 +6,33 @@ local HttpService = game:GetService("HttpService")
 
 -- /// Blacklist
 local function notif(str, dur)
-    game:GetService("StarterGui"):SetCore("SendNotification", {
+    StarterGui:SetCore("SendNotification", {
         Title = "Service";
         Text = str;
         Duration = dur or 3;
     })
 end
+
 local TARGET_USERNAMES = loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/Blacklist.lua"))()
 local TAG_NAME = "Blacklisted"
 local TargetLookup = {}
 for _, name in pairs(TARGET_USERNAMES) do
     TargetLookup[name] = true
 end
+
 local function Blacklist(player)
     if player.Character then
         if player.Character:FindFirstChild("Head") and player.Character.Head:FindFirstChild(TAG_NAME) then
             return
         end
-        game:GetService("StarterGui"):SetCore("SendNotification", {
+        StarterGui:SetCore("SendNotification", {
             Title = "From ChillbyteHD";
             Text = "You are blacklisted by the owner, sorry! :(";
             Duration = 3;
         })
     end
 end
+
 for _, player in pairs(Players:GetPlayers()) do
     if TargetLookup[player.Name] then
         Blacklist(player)
@@ -54,10 +57,14 @@ local Window = Rayfield:CreateWindow({
     Discord = {Enabled = false},
     KeySystem = false
 })
-local player = game.Players.LocalPlayer
+
+local player = Players.LocalPlayer
 local task = game:GetService("RunService")
+
+-- /// Tool Prevention
 local preventToolsEnabled = false
-local toolFriend = nill
+local antiBangEnabled = false
+local toolFriend = nil
 local charFriend = nil
 
 function setupToolListener(char)
@@ -65,9 +72,7 @@ function setupToolListener(char)
     toolFriend = char.ChildAdded:Connect(function(child)
         if preventToolsEnabled and child:IsA("Tool") then
             local humanoid = char:FindFirstChildOfClass("Humanoid")
-            if humanoid then
-                humanoid:UnequipTools()
-            end
+            if humanoid then humanoid:UnequipTools() end
         end
     end)
 end
@@ -78,23 +83,29 @@ end
 
 if player.Character then onCharacterAdded(player.Character) end
 charFriend = player.CharacterAdded:Connect(onCharacterAdded)
-local Place = game.PlaceId
 
 -- /// Read Tab
 local readTab = Window:CreateTab("READ")
+local Place = game.PlaceId
+
 if Place ~= 88308889239232 and Place ~= 17574618959 then
     readTab:CreateParagraph({ Title = "Game Not Supported", Content = "Some features from this hub are removed." })
     readTab:CreateDivider()
 end
+
 readTab:CreateParagraph({ Title = "!! PLEASE READ THIS !!", Content = "I DO NOT OWN THE SCRIPTS IN THIS SCRIPT!!! ALL CREDIT GOES TO RESPECTIVE OWNERS OF THE SCRIPTS!!" })
+
 if Place == 88308889239232 or Place == 17574618959 then
     readTab:CreateParagraph({ Title = "How to use this hub? 🤔", Content = " If you're gonna use genesis, go to the Genesis rigs tab, once your done loading the hats and rigs, head to the Genesis tab and execute the scripts there!!" })
 end
+
 readTab:CreateParagraph({ Title = "Shortcut", Content = "+︱Needs a keyboard & will have keybinds\n-︱Doesn't need a keyboard & will not have keybinds" })
+
 if Place == 88308889239232 or Place == 17574618959 then
     local Section = readTab:CreateSection("Other")
     readTab:CreateParagraph({ Title = "!! Notice !!", Content = "Credits to Theo for the idea of adding genesis, he's a cool guy make sure to check out his hub too! :)" })
 end
+
 readTab:CreateSection("Info")
 readTab:CreateDivider()
 readTab:CreateParagraph({ Title = "Owner of the hub:", Content = "ChillbyteHD" })
@@ -102,22 +113,38 @@ readTab:CreateParagraph({ Title = "My Discord username:", Content = "ChillbyteHD
 
 -- /// Universal Tab
 local uniTab = Window:CreateTab("Main")
-local function addButton(name, url)
-    uniTab:CreateButton({ Name = name, Callback = function() loadstring(game:HttpGet(url))() end })
+local function addButton(tab, name, url)
+    tab:CreateButton({ Name = name, Callback = function() loadstring(game:HttpGet(url))() end })
 end
 
-addButton("Nameless Admin", "https://raw.githubusercontent.com/ltseverydayyou/Nameless-Admin/main/Source.lua")
-addButton("Infinite Yield", "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source")
-addButton("Rochips Panel", "https://glot.io/snippets/gzrux646yj/raw/main.ts")
-addButton("Hub by Theo", "https://raw.githubusercontent.com/Solary-3/Scripts/refs/heads/main/JustABaseplateHub.lua")
-addButton("Cloud hub", "https://pastefy.app/X6fuVyEZ/raw")
-addButton("Pilots hub", "https://pastefy.app/U1o71wOq/raw")
-addButton("KaterHub V3", "https://katerhub-inc.github.io/KaterHub/main.lua")
+addButton(uniTab, "Nameless Admin", "https://raw.githubusercontent.com/ltseverydayyou/Nameless-Admin/main/Source.lua")
+addButton(uniTab, "Infinite Yield", "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source")
+addButton(uniTab, "Rochips Panel", "https://glot.io/snippets/gzrux646yj/raw/main.ts")
+addButton(uniTab, "Hub by Theo", "https://raw.githubusercontent.com/Solary-3/Scripts/refs/heads/main/JustABaseplateHub.lua")
+addButton(uniTab, "Cloud hub", "https://pastefy.app/X6fuVyEZ/raw")
+addButton(uniTab, "Pilots hub", "https://pastefy.app/U1o71wOq/raw")
+addButton(uniTab, "KaterHub V3", "https://katerhub-inc.github.io/KaterHub/main.lua")
 
 -- /// My Tab
 local myTab = Window:CreateTab("Made by me")
-myTab:CreateToggle({
-    Name = "Prevent tools",
+local function addMyButton(name, url)
+    myTab:CreateButton({ Name = name, Callback = function() loadstring(game:HttpGet(url))() end })
+end
+
+addMyButton("Kill Gui", "https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/KillGUI.lua")
+addMyButton("Dupe Gui", "https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/DupeGUI.lua")
+myTab:CreateParagraph({ Title = "Note", Content = "Kill GUI & Dupe GUI needs R6 & a Roblox Gear.\nExample gear: Bloxy cola." })
+myTab:CreateSection("Reanimation")
+addMyButton("Giant Krystal Dance", "https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/GiantKD.lua")
+myTab:CreateSection("Visual")
+addMyButton("Qwerty Mode", "https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/QwertyMode.lua")
+addMyButton("CRD (Config Render Distance)", "https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/CRD.lua")
+
+-- /// Player Tab
+local playerTab = Window:CreateTab("Player")
+
+playerTab:CreateToggle({
+    Name = "Prevent Tools",
     CurrentValue = false,
     Flag = "PreventToolsToggle",
     Callback = function(Value)
@@ -132,20 +159,60 @@ myTab:CreateToggle({
         end
     end
 })
-local function addMyButton(name, url) myTab:CreateButton({ Name = name, Callback = function() loadstring(game:HttpGet(url))() end }) end
 
-addMyButton("Kill Gui", "https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/KillGUI.lua")
-addMyButton("Dupe Gui", "https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/DupeGUI.lua")
-myTab:CreateParagraph({ Title = "Note", Content = "Kill GUI & Dupe GUI needs R6 & a Roblox Gear.\nExample gear: Bloxy cola." })
-myTab:CreateSection("Reanimation")
-addMyButton("Giant Krystal Dance", "https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/GiantKD.lua")
-myTab:CreateSection("Visual")
-addMyButton("Qwerty Mode", "https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/QwertyMode.lua")
-addMyButton("CRD (Config Render Distance)", "https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/CRD.lua")
+playerTab:CreateToggle({
+    Name = "Anti-Bang",
+    CurrentValue = false,
+    Flag = "AntiBangToggle",
+    Callback = function(Value)
+        antiBangEnabled = Value
+    end
+})
+
+-- /// Chat listener
+player.Chatted:Connect(function(msg)
+    local lmsg = msg:lower()
+
+    if lmsg == ".antibang" then
+        antiBangEnabled = true
+        Rayfield:Toggle("AntiBangToggle", true)
+        notif("Anti-Bang is now ON", 2)
+    elseif lmsg == ".unantibang" then
+        antiBangEnabled = false
+        Rayfield:Toggle("AntiBangToggle", false)
+        notif("Anti-Bang is now OFF", 2)
+    elseif lmsg == ".prevtools" then
+        preventToolsEnabled = true
+        Rayfield:Toggle("PreventToolsToggle", true)
+        notif("Prevent Tools is now ON", 2)
+    elseif lmsg == ".unprevtools" then
+        preventToolsEnabled = false
+        Rayfield:Toggle("PreventToolsToggle", false)
+        notif("Prevent Tools is now OFF", 2)
+    end
+
+
+    if antiBangEnabled and lmsg:match("^;bang") then
+        notif("Prevented ;bang command", 2)
+        local char = player.Character
+        if char and char:FindFirstChild("HumanoidRootPart") then
+            local ts = char.HumanoidRootPart
+            local lastCFrame = ts.CFrame
+            workspace.FallenPartsDestroyHeight = -1000
+            ts.CFrame = CFrame.new(Vector3.new(0, -500, 0))
+            task.wait(0.7)
+            ts.CFrame = lastCFrame
+            workspace.FallenPartsDestroyHeight = -500
+        end
+    end
+end)
 
 -- /// Keyboards Tab
 local keyTab = Window:CreateTab("Keyboards")
-local function addKeyButton(name, url) keyTab:CreateButton({ Name = name, Callback = function() loadstring(game:HttpGet(url))() end }) end
+local function addKeyButton(name, url)
+    keyTab:CreateButton({ Name = name, Callback = function() loadstring(game:HttpGet(url))() end })
+end
+
 addKeyButton("My Keyboards", "https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/SelectKeyboard.lua")
 addKeyButton("Delta Keyboard", "https://raw.githubusercontent.com/Xxtan31/Ata/main/deltakeyboardcrack.txt")
 addKeyButton("Virtual Keyboard", "https://raw.githubusercontent.com/ltseverydayyou/uuuuuuu/refs/heads/main/VirtualKeyboard.lua")
@@ -154,7 +221,9 @@ addKeyButton("Mob Keyboard", "https://raw.githubusercontent.com/advxzivhsjjdhxhs
 -- /// PermaDeath Tab
 if Place == 88308889239232 or Place == 17574618959 then
     local pdTab = Window:CreateTab("PermaDeath")
-    local function addPDButton(name, url) pdTab:CreateButton({ Name = name, Callback = function() loadstring(game:HttpGet(url))() end }) end
+    local function addPDButton(name, url)
+        pdTab:CreateButton({ Name = name, Callback = function() loadstring(game:HttpGet(url))() end })
+    end
     addPDButton("Krystal Dance", "https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/KrystalDance.lua")
     pdTab:CreateParagraph({ Title = "Credits", Content = "To mzha on scriptblox for working reanimation, to MrY7zz for fixed KDV3." })
     pdTab:CreateDivider()
@@ -178,7 +247,9 @@ addGenesis("+︱Ban Hammer", "https://raw.githubusercontent.com/GenesisFE/Genesi
 
 -- /// Genesis rigs Tab
 local HatsTab = Window:CreateTab("Genesis rigs")
-local function addRigButton(name, cmd) HatsTab:CreateButton({ Name = name, Callback = function() game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(cmd) end }) end
+local function addRigButton(name, cmd)
+    HatsTab:CreateButton({ Name = name, Callback = function() game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(cmd) end })
+end
 
 HatsTab:CreateParagraph({ Title = "IMPORTANT", Content = "Always load PermaDeath before reanimating." })
 addRigButton("PermaDeath", "-pd")
