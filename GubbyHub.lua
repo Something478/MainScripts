@@ -142,7 +142,6 @@ addMyButton("CRD (Config Render Distance)", "https://raw.githubusercontent.com/S
 
 -- /// Player Tab
 local playerTab = Window:CreateTab("Player")
-
 playerTab:CreateParagraph({
     Title = "Chat system",
     Content = "You can use chat to use the toggles! .antibang (prevents bang)\n.unantibang (turns antibang off)\n.prevtools (turns prevent tools on)\n.unprevtools (turns prevent tools off)"
@@ -171,25 +170,32 @@ playerTab:CreateToggle({
     Flag = "AntiBangToggle",
     Callback = function(Value)
         antiBangEnabled = Value
-        if antiBangEnabled then
-            local char = player.Character
-            if char and char:FindFirstChild("HumanoidRootPart") then
-                local hrp = char.HumanoidRootPart
-                workspace.FallenPartsDestroyHeight = -1000
-                local lastCFrame = hrp.CFrame
-                hrp.CFrame = CFrame.new(Vector3.new(0, -500, 0))
-                task.wait(0.7)
-                hrp.CFrame = lastCFrame
-                workspace.FallenPartsDestroyHeight = -500
-            end
-        end
     end
 })
 
--- /// Chat listener
+-- /// Floating Anti-Bang logic
+local floatPart = Instance.new("Part")
+floatPart.Anchored = true
+floatPart.CanCollide = false
+floatPart.Transparency = 1
+floatPart.Size = Vector3.new(2,1,2)
+
+task.spawn(function()
+    while task.wait(0.1) do
+        if antiBangEnabled and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+            local hrp = player.Character.HumanoidRootPart
+            if hrp.Position.Y < workspace.FallenPartsDestroyHeight + 5 then
+                floatPart.CFrame = CFrame.new(hrp.Position.X, hrp.Position.Y + 5, hrp.Position.Z)
+                floatPart.Parent = workspace
+                hrp.CFrame = floatPart.CFrame
+            end
+        end
+    end
+end)
+
+-- /// Chat listener for toggle commands
 player.Chatted:Connect(function(msg)
     local lmsg = msg:lower()
-
     if lmsg == ".antibang" then
         antiBangEnabled = true
         Rayfield:Toggle("AntiBangToggle", true)
@@ -250,7 +256,9 @@ addGenesis("+︱Ban Hammer", "https://raw.githubusercontent.com/GenesisFE/Genesi
 -- /// Genesis rigs Tab
 local HatsTab = Window:CreateTab("Genesis rigs")
 local function addRigButton(name, cmd)
-    HatsTab:CreateButton({ Name = name, Callback = function() game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(cmd) end })
+    HatsTab:CreateButton({ Name = name, Callback = function()
+        game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(cmd)
+    end })
 end
 
 HatsTab:CreateParagraph({ Title = "IMPORTANT", Content = "Always load PermaDeath before reanimating." })
@@ -267,3 +275,5 @@ addRigButton("Sin Dragon", "-gh 117186631495734 99965319383570 132770514241770 3
 addRigButton("Lightning Cannon", "-gh 111672581230926 126145101810389 136055191177936 4504231783")
 addRigButton("Goner", "-gh 17770317484 17822722698 17822749561 17772174303 17835236579")
 addRigButton("Ban Hammer", "-gh 15548314241")
+
+notif("Gubby Hub Loaded Successfully!", 3)
