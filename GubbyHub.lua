@@ -143,6 +143,11 @@ addMyButton("CRD (Config Render Distance)", "https://raw.githubusercontent.com/S
 -- /// Player Tab
 local playerTab = Window:CreateTab("Player")
 
+playerTab:CreateParagraph({
+    Title = "Chat system",
+    Content = "You can use chat to use the toggles! .antibang (prevents bang)\n.unantibang (turns antibang off)\n.prevtools (turns prevent tools on)\n.unprevtools (turns prevent tools off)"
+})
+
 playerTab:CreateToggle({
     Name = "Prevent Tools",
     CurrentValue = false,
@@ -166,6 +171,18 @@ playerTab:CreateToggle({
     Flag = "AntiBangToggle",
     Callback = function(Value)
         antiBangEnabled = Value
+        if antiBangEnabled then
+            local char = player.Character
+            if char and char:FindFirstChild("HumanoidRootPart") then
+                local hrp = char.HumanoidRootPart
+                workspace.FallenPartsDestroyHeight = -1000
+                local lastCFrame = hrp.CFrame
+                hrp.CFrame = CFrame.new(Vector3.new(0, -500, 0))
+                task.wait(0.7)
+                hrp.CFrame = lastCFrame
+                workspace.FallenPartsDestroyHeight = -500
+            end
+        end
     end
 })
 
@@ -189,21 +206,6 @@ player.Chatted:Connect(function(msg)
         preventToolsEnabled = false
         Rayfield:Toggle("PreventToolsToggle", false)
         notif("Prevent Tools is now OFF", 2)
-    end
-
-
-    if antiBangEnabled and lmsg:match("^;bang") then
-        notif("Prevented ;bang command", 2)
-        local char = player.Character
-        if char and char:FindFirstChild("HumanoidRootPart") then
-            local ts = char.HumanoidRootPart
-            local lastCFrame = ts.CFrame
-            workspace.FallenPartsDestroyHeight = -1000
-            ts.CFrame = CFrame.new(Vector3.new(0, -500, 0))
-            task.wait(0.7)
-            ts.CFrame = lastCFrame
-            workspace.FallenPartsDestroyHeight = -500
-        end
     end
 end)
 
