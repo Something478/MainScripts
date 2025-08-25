@@ -16,8 +16,6 @@ end
 
 notify("Did you know, that", " if u pour water on a rock, nothing happens? But if pour water on a rock, nothing happens.", 3)
 
--- 1
-
 local TARGET_USERNAMES = loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/Blacklist.lua"))()
 local TAG_NAME = "Blacklisted"
 local TargetLookup = {}
@@ -699,3 +697,9 @@ if Place == 88308889239232 or Place == 17574618959 then
         end
     })
 end
+
+Rayfield:Notify({
+   Title = "Yo",
+   Content = "Itz loaded!",
+   Duration = 4
+})
