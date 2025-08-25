@@ -8,13 +8,11 @@ local TextChat = game:GetService("TextChatService")
 -- /// Blacklist
 local function notify(str, dur)
     StarterGui:SetCore("SendNotification", {
-        Title = "Service";
+        Title = "Local Hub";
         Text = str;
         Duration = dur or 3;
     })
 end
-
-notify("Never gonna give you up\nNever gonna let you down\nNever gonna run around and desert you", "One.")
 
 local TARGET_USERNAMES = loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/Blacklist.lua"))()
 local TAG_NAME = "Blacklisted"
