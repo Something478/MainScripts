@@ -464,7 +464,7 @@ if Place == 88308889239232 or Place == 17574618959 then
 
     pdTab:CreateParagraph({
         Title = "Credits",
-        Content = To MrY7zz for fixed KDV3, and to MZHA on scriptblox for working reanimation."
+        Content = "To MrY7zz for fixed KDV3, and to MZHA on scriptblox for working reanimation."
     })
 
     pdTab:CreateDivider()
