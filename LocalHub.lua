@@ -501,7 +501,7 @@ if Place == 88308889239232 or Place == 17574618959 then
 
     pdTab:CreateParagraph({
         Title = "Credits",
-        Content = "To mzha on scriptblox for working reanimation, to MrY7zz for fixed KDV3."
+        Content = To MrY7zz for fixed KDV3, and to MZHA on scriptblox for working reanimation."
     })
 
     pdTab:CreateDivider()
@@ -649,14 +649,23 @@ if Place == 88308889239232 or Place == 17574618959 then
     HatsTab:CreateButton({
         Name = "Genesis Rigs",
         Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("-gh 138364679836274 82942681251131 140395948277978 102599402682100 90960046381276 13058406993")
+            TextChat.TextChannels.RBXGeneral:SendAsync("-gh 138364679836274 82942681251131 140395948277978 102599402682100 90960046381276 13058406993 ")
         end
     })
 
     HatsTab:CreateButton({
         Name = "Genesis Rigs [Black]",
         Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("-gh 131385506535381 85392395166623 129462518582032 138364679836274 12850150835 106249329428811")
+            TextChat.TextChannels.RBXGeneral:SendAsync("-gh 131385506535381 85392395166623 129462518582032 138364679836274 12850150835 106249329428811 ")
+        end
+    })
+
+HatsTab:CreateSection("Custom Rigs")
+
+HatsTab:CreateButton({
+        Name = "Genesis Rigs [Noob]",
+        Callback = function()
+            TextChat.TextChannels.RBXGeneral:SendAsync("-gh 95290698984301, 84451219120140, 72292903231768, 108186273151388, 139904067056008 ")
         end
     })
 
