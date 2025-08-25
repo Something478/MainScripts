@@ -12,4 +12,4 @@ notify("Hey :D", "Loading Local Hub.", 3)
 
 task.wait(1)
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MainScripts/refs/heads/main/nLocalHub.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MainScripts/refs/heads/main/nLocalHub.lua"))() -- /// Moved to another Loadstring.
