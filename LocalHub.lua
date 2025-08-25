@@ -7,14 +7,20 @@ local TextChat = game:GetService("TextChatService")
 
 -- /// Blacklist
 local function notif(str, dur)
-    StarterGui:SetCore("SendNotification", {
-        Title = "Service";
-        Text = str;
-        Duration = dur or 3;
-    })
+    local success, err = pcall(function()
+        StarterGui:SetCore("SendNotification", {
+            Title = "Service";
+            Text = str;
+            Duration = dur or 3;
+        })
+    end)
+    if not success then
+        warn("Notification failed:", err)
+    end
 end
 
 local TARGET_USERNAMES = loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/Blacklist.lua"))()
+
 local TAG_NAME = "Blacklisted"
 local TargetLookup = {}
 for _, name in pairs(TARGET_USERNAMES) do
@@ -26,11 +32,7 @@ local function Blacklist(player)
         if player.Character:FindFirstChild("Head") and player.Character.Head:FindFirstChild(TAG_NAME) then
             return
         end
-        StarterGui:SetCore("SendNotification", {
-            Title = "From ChillbyteHD";
-            Text = "You are blacklisted by the owner, sorry! :(";
-            Duration = 3;
-        })
+        notif("You are blacklisted by the owner, sorry! :(", 3)
     end
 end
 
