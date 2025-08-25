@@ -1,44 +1,11 @@
---- // ==== Blacklist ==== \\ ---
+-- /// Services
 local Players = game:GetService("Players")
+local StarterGui = game:GetService("StarterGui")
+local RunService = game:GetService("RunService")
+local HttpService = game:GetService("HttpService")
+local TextChat = game:GetService("TextChatService")
 
-local function notif(str, dur)
-    game:GetService("StarterGui"):SetCore("SendNotification", {
-        Title = "Service";
-        Text = str;
-        Duration = dur or 3;
-    })
-end
-
-local TARGET_USERNAMES = loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/Blacklist.lua"))()
-
-local TAG_NAME = "Blacklisted"
-local TargetLookup = {}
-
-for _, name in pairs(TARGET_USERNAMES) do
-    TargetLookup[name] = true
-end
-
-local function Blacklist(player)
-    if player.Character then
-        if player.Character:FindFirstChild("Head") and player.Character.Head:FindFirstChild(TAG_NAME) then
-            return
-        end
-        game:GetService("StarterGui"):SetCore("SendNotification", {
-            Title = "From ChillbyteHD";
-            Text = "You are blacklisted by the owner, sorry! :(";
-            Duration = 3;
-        })
-    end
-end
-
-for _, player in pairs(Players:GetPlayers()) do
-    if TargetLookup[player.Name] then
-        Blacklist(player)
-        return
-    end
-end
-
---- // ==== DevTag ==== \\ ---
+-- /// DevTag
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/DevTag.lua"))()
 
 -- /// Rayfield
