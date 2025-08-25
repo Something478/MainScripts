@@ -6,7 +6,7 @@ function notify(title, text, duration)
     })
 end
 
-notify("Hey :D", "Loading Local Hub.", 3)
+notify("Yo", "Did you know, that if u pour a water on a rock, nothing happens?", 3)
 
 task.wait(1)
 
