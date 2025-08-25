@@ -6,7 +6,7 @@ local HttpService = game:GetService("HttpService")
 local TextChat = game:GetService("TextChatService")
 
 -- /// Blacklist
-local function notify(str, dur)
+local function notif(str, dur)
     StarterGui:SetCore("SendNotification", {
         Title = "Service";
         Text = str;
