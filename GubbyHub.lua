@@ -6,7 +6,7 @@ function notify(title, text, duration)
     })
 end
 
-notify("Yo", "Did you know, that if u pour a water on a rock, nothing happens?", 3)
+notify("Yo", "Did you know, that if u pour water on a rock, nothing happens?", 3)
 
 task.wait(1)
 
