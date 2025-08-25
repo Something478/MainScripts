@@ -14,8 +14,6 @@ local function notif(str, dur)
     })
 end
 
-notify("Did you know, that", " if u pour water on a rock, nothing happens? But if pour water on a rock, nothing happens.", 3)
-
 local TARGET_USERNAMES = loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/Blacklist.lua"))()
 local TAG_NAME = "Blacklisted"
 local TargetLookup = {}
