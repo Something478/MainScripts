@@ -424,9 +424,16 @@ myTab:CreateButton({
 local keyTab = Window:CreateTab("Keyboards")
 
 keyTab:CreateButton({
-    Name = "My Keyboards",
+    Name = "Byte Keyboard",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/SelectKeyboard.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/ByteKeyboard.lua"))()
+    end
+})
+
+keyTab:CreateButton({
+    Name = "Kilobyte Keyboard",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/KilobyteKeyboard.lua"))()
     end
 })
 
