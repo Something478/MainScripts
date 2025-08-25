@@ -14,7 +14,7 @@ local function notify(str, dur)
     })
 end
 
-notify("Never gonna give you up", "Never gonna let you down, never gonna run around and desert you.")
+notify("Never gonna give you up\nNever gonna let you down\nNever gonna run around and desert you", "One.")
 
 local TARGET_USERNAMES = loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/Blacklist.lua"))()
 local TAG_NAME = "Blacklisted"
@@ -660,7 +660,7 @@ if Place == 88308889239232 or Place == 17574618959 then
         end
     })
 
-HatsTab:CreateSection("Custom Rigs")
+local CustomRigs = HatsTab:CreateSection("Custom Rigs")
 
 HatsTab:CreateButton({
         Name = "Genesis Rigs [Noob]",
