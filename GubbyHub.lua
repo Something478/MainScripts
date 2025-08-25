@@ -8,7 +8,7 @@ end
 
 -- /// Usage
 
-notify("! ATTENTION !", "The hub is moved.", 3)
+notify("Hey :D", "Loading Local Hub.", 3)
 
 task.wait(1)
 
