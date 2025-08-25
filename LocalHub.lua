@@ -53,6 +53,7 @@ end
 if player.Character then
     onCharacterAdded(player.Character)
 end
+
 charFriend = player.CharacterAdded:Connect(onCharacterAdded)
 
 local Place = game.PlaceId
