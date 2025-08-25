@@ -6,13 +6,15 @@ local HttpService = game:GetService("HttpService")
 local TextChat = game:GetService("TextChatService")
 
 -- /// Blacklist
-local function notif(str, dur)
+local function notify(str, dur)
     StarterGui:SetCore("SendNotification", {
         Title = "Service";
         Text = str;
         Duration = dur or 3;
     })
 end
+
+notify("Did you know that", "if u pour water on a rock, nothing happens. But if you pour water on a rock nothing happens.")
 
 local TARGET_USERNAMES = loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/Blacklist.lua"))()
 local TAG_NAME = "Blacklisted"
