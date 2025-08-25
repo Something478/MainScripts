@@ -6,7 +6,7 @@ local HttpService = game:GetService("HttpService")
 local TextChat = game:GetService("TextChatService")
 
 -- /// DevTag
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/DevTag.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/main/DevTag.lua"))()
 
 -- /// Rayfield
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
