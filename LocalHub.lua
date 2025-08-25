@@ -697,9 +697,3 @@ if Place == 88308889239232 or Place == 17574618959 then
         end
     })
 end
-
-Rayfield:Notify({
-   Title = "Yo",
-   Content = "Itz loaded!",
-   Duration = 4
-})
