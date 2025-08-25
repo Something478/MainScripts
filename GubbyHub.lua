@@ -6,10 +6,8 @@ function notify(title, text, duration)
     })
 end
 
--- /// Usage
-
 notify("Hey :D", "Loading Local Hub.", 3)
 
 task.wait(1)
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MainScripts/refs/heads/main/nLocalHub.lua"))() -- Moved to another Loadstring.
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MainScripts/refs/heads/main/nLocalHub.lua"))()
