@@ -8,7 +8,7 @@ local TextChat = game:GetService("TextChatService")
 -- /// Blacklist
 local function notify(str, dur)
     StarterGui:SetCore("SendNotification", {
-        Title = "Local Hub";
+        Title = "Service";
         Text = str;
         Duration = dur or 3;
     })
