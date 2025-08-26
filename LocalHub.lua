@@ -59,6 +59,7 @@ charFriend = player.CharacterAdded:Connect(onCharacterAdded)
 local Place = game.PlaceId
 
 -- /// Home Tab
+
 local HomeTab = Window:CreateTab("Home")
 
 if Place ~= 88308889239232 and Place ~= 17574618959 then
@@ -167,6 +168,7 @@ local Input = HomeTab:CreateInput({
 })
 
 -- /// Themes Section
+
 local ThemesSection = HomeTab:CreateSection("Themes Section")
 
 HomeTab:CreateButton({
@@ -201,6 +203,7 @@ HomeTab:CreateButton({
 })
 
 -- /// Custom Themes Section
+
 local CustomThemesSection = HomeTab:CreateSection("Custom Themes Section")
 
 HomeTab:CreateButton({
@@ -319,6 +322,7 @@ HomeTab:CreateButton({
 })
 
 -- /// Main Tab
+
 local MainTab = Window:CreateTab("Main")
 MainTab:CreateButton({
     Name = "Nameless Admin",
@@ -373,6 +377,7 @@ MainTab:CreateButton({
 })
 
 -- /// My Tab
+
 local myTab = Window:CreateTab("Made by me")
 myTab:CreateSection("Item related")
 
@@ -392,7 +397,7 @@ myTab:CreateButton({
 
 myTab:CreateParagraph({
     Title = "Note",
-    Content = "Kill GUI & Dupe GUI needs R6 & a Roblox Gear.\nExample gear: Bloxy cola."
+    Content = "Kill GUI & Dupe GUI needs R6 & a Roblox Gear (Item), without a gear it won't work.\nExample gear: Bloxy cola."
 })
 
 myTab:CreateSection("Reanimation")
@@ -459,173 +464,177 @@ keyTab:CreateButton({
 })
 
 if Place == 88308889239232 or Place == 17574618959 then
-    -- /// PermaDeath tab
-    local pdTab = Window:CreateTab("PermaDeath")
 
-    pdTab:CreateButton({
-        Name = "Krystal Dance",
-        Callback = function()
+    -- /// PermaDeath tab
+
+local pdTab = Window:CreateTab("PermaDeath")
+
+pdTab:CreateButton({
+    Name = "Krystal Dance",
+    Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/KrystalDance.lua"))()
         end
     })
 
-    pdTab:CreateParagraph({
-        Title = "Credits",
-        Content = "To MrY7zz for fixed KDV3, and to MZHA on scriptblox for working reanimation."
+pdTab:CreateParagraph({
+    Title = "Credits",
+    Content = "To MrY7zz for fixed KDV3, and to MZHA on scriptblox for working reanimation."
     })
 
-    pdTab:CreateDivider()
+pdTab:CreateDivider()
 
-    pdTab:CreateButton({
-        Name = "+︱Nameless Animations V4",
-        Callback = function()
+pdTab:CreateButton({
+    Name = "+︱Nameless Animations V4",
+    Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/NamelessAnimationsV4.lua"))()
         end
     })
 
-    pdTab:CreateParagraph({
-        Title = "Credits",
-        Content = "To the owner of the script (I forgot his name)"
-    })
+pdTab:CreateParagraph({
+    Title = "Credits",
+    Content = "To the owner of the script (I forgot his name)"
+})
 
     -- /// Genesis tab
-    local genTab = Window:CreateTab("Genesis")
 
-    genTab:CreateButton({
-        Name = "+︱Krystal Dance",
-        Callback = function()
+local genTab = Window:CreateTab("Genesis")
+
+genTab:CreateButton({
+    Name = "+︱Krystal Dance",
+    Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Krystal%20Dance"))()
         end
     })
 
-    genTab:CreateParagraph({
-        Title = "Keybinds",
-        Content = "Q, E, R, T, Y, U, P, F, G, H, J, K, L"
-    })
+genTab:CreateParagraph({
+    Title = "Keybinds",
+    Content = "Q, E, R, T, Y, U, P, F, G, H, J, K, L"
+})
 
-    genTab:CreateDivider()
+genTab:CreateDivider()
 
-    genTab:CreateButton({
-        Name = "+︱Neptunian V",
-        Callback = function()
+genTab:CreateButton({
+    Name = "+︱Neptunian V",
+    Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Neptunian%20V"))()
         end
     })
 
-    genTab:CreateParagraph({
-        Title = "Keybinds",
-        Content = "F, Z, X, R"
-    })
+genTab:CreateParagraph({
+    Title = "Keybinds",
+    Content = "F, Z, X, R"
+})
 
-    genTab:CreateDivider()
+genTab:CreateDivider()
 
-    genTab:CreateButton({
-        Name = "+︱Sin Dragon",
-        Callback = function()
+genTab:CreateButton({
+    Name = "+︱Sin Dragon",
+    Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Sin%20Dragon"))()
         end
     })
 
-    genTab:CreateParagraph({
-        Title = "Keybinds",
-        Content = "G, Z, X, C"
-    })
+genTab:CreateParagraph({
+    Title = "Keybinds",
+    Content = "G, Z, X, C"
+})
 
     genTab:CreateDivider()
 
-    genTab:CreateButton({
-        Name = "+︱Lightning Cannon",
-        Callback = function()
+genTab:CreateButton({
+    Name = "+︱Lightning Cannon",
+    Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Lightning%20Cannon"))()
         end
     })
 
-    genTab:CreateParagraph({
-        Title = "Keybinds",
-        Content = "E, Z, X, C, V, B, M"
-    })
+genTab:CreateParagraph({
+    Title = "Keybinds",
+    Content = "E, Z, X, C, V, B, M"
+})
 
-    genTab:CreateDivider()
+genTab:CreateDivider()
 
-    genTab:CreateButton({
-        Name = "+︱Goner",
-        Callback = function()
+genTab:CreateButton({
+    Name = "+︱Goner",
+    Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Goner"))()
         end
     })
 
-    genTab:CreateParagraph({
-        Title = "Keybinds",
-        Content = "Q"
-    })
+genTab:CreateParagraph({
+    Title = "Keybinds",
+    Content = "Q"
+})
 
-    genTab:CreateDivider()
+genTab:CreateDivider()
 
-    genTab:CreateButton({
-        Name = "+︱Ban Hammer",
-        Callback = function()
+genTab:CreateButton({
+    Name = "+︱Ban Hammer",
+    Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Ban%20Hammer"))()
         end
     })
 
-    genTab:CreateParagraph({
-        Title = "Keybinds",
-        Content = "E, R"
-    })
+genTab:CreateParagraph({
+    Title = "Keybinds",
+    Content = "E, R"
+})
 
     -- /// Rigs tab
+
     local HatsTab = Window:CreateTab("Genesis rigs")
 
-    HatsTab:CreateParagraph({
-        Title = "IMPORTANT",
-        Content = "Always load PermaDeath before reanimating."
-    })
+HatsTab:CreateParagraph({
+    Title = "IMPORTANT",
+    Content = "Always load PermaDeath before reanimating."
+})
 
-    HatsTab:CreateButton({
-        Name = "PermaDeath",
-        Callback = function()
+HatsTab:CreateButton({
+    Name = "PermaDeath",
+    Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-pd")
     end
 })
 
-    HatsTab:CreateButton({
-        Name = "Remove Hats",
-        Callback = function()
+HatsTab:CreateButton({
+    Name = "Remove Hats",
+    Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-ch")
     end
 })
 
-    HatsTab:CreateButton({
-        Name = "Respawn",
-        Callback = function()
+HatsTab:CreateButton({
+   Name = "Respawn",
+   Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-re")
     end
 })
 
-    HatsTab:CreateButton({
-        Name = "Save hats",
-        Callback = function()
+HatsTab:CreateButton({
+   Name = "Save hats",
+   Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-sh")
     end
 })
 
-    HatsTab:CreateDivider()
+HatsTab:CreateDivider()
 
-    HatsTab:CreateParagraph({
-        Title = "IMPORTANT!",
-        Content = "It's important to always load the rigs so everyone can see you!"
-    })
+HatsTab:CreateParagraph({
+    Title = "IMPORTANT!",
+    Content = "It's important to always load the rigs so everyone can see you!"
+})
 
-    HatsTab:CreateButton({
-        Name = "Genesis Rigs",
-        Callback = function()
+HatsTab:CreateButton({
+    Name = "Genesis Rigs",
+    Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-gh 138364679836274 82942681251131 140395948277978 102599402682100 90960046381276 13058406993 ")
     end
 })
 
-    HatsTab:CreateButton({
-        Name = "Genesis Rigs [Black]",
-        Callback = function()
+HatsTab:CreateButton({
+   Name = "Genesis Rigs [Black]",
+   Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-gh 131385506535381 85392395166623 129462518582032 138364679836274 12850150835 106249329428811 ")
     end
 })
@@ -633,66 +642,66 @@ if Place == 88308889239232 or Place == 17574618959 then
 local CustomRigs = HatsTab:CreateSection("Custom Rigs")
 
 HatsTab:CreateButton({
-        Name = "Genesis Rigs [Noob]",
-        Callback = function()
+    Name = "Genesis Rigs [Noob]",
+    Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-gh 95290698984301, 84451219120140, 72292903231768, 108186273151388, 139904067056008 ")
     end
 })
 
 HatsTab:CreateButton({ 
-        Name = "Genesis Rigs [Guest]", 
-        Callback = function()
+   Name = "Genesis Rigs [Guest]", 
+   Callback = function()
         game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -gh 13058406993 138364679836274 131385506535381 85392395166623 129462518582032 106249329428811 108224319902592 82404150383568 100856932339214")
     end
 })
 
 HatsTab:CreateButton({ 
-      Name = "1x1x1x1 Rigs", 
-      Callback = function()
+   Name = "Genesis Rigs [1x1x1x1]", 
+   Callback = function()
         game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -gh 131385506535381 85392395166623 129462518582032 12850150835 106249329428811 17681457649 17532925923 16296624548")
     end
 })
 
-    HatsTab:CreateDivider()
+HatsTab:CreateDivider()
 
-    HatsTab:CreateButton({
-        Name = "Neptunian V",
-        Callback = function()
+HatsTab:CreateButton({
+   Name = "Neptunian V",
+   Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-gh 5316479641")
     end
 })
 
-    HatsTab:CreateButton({
-        Name = "Sin Dragon",
-        Callback = function()
+HatsTab:CreateButton({
+   Name = "Sin Dragon",
+   Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-gh 117186631495734 99965319383570 132770514241770 3756389957 14864581977 150381051 4504231783")
     end
 })
 
-    HatsTab:CreateButton({
-        Name = "Lightning Cannon",
-        Callback = function()
+HatsTab:CreateButton({
+   Name = "Lightning Cannon",
+   Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-gh 111672581230926 126145101810389 136055191177936 4504231783")
     end
 })
 
-    HatsTab:CreateButton({
-        Name = "Goner",
-        Callback = function()
+HatsTab:CreateButton({
+   Name = "Goner",
+   Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-gh 17770317484 17822722698 17822749561 17772174303 17835236579")
     end
 })
 
-    HatsTab:CreateButton({
-        Name = "Ban Hammer",
-        Callback = function()
+HatsTab:CreateButton({
+   Name = "Ban Hammer",
+   Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-gh 15548314241")
     end
 })
 
-    HatsTab:CreateButton({
-        Name = "Motorcycle",
-        Callback = function()
+HatsTab:CreateButton({
+  Name = "Motorcycle",
+  Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-gh 4504231783, 11354413365, 191101707, 18209672127 ")
     end
 })
