@@ -689,4 +689,11 @@ HatsTab:CreateButton({
             TextChat.TextChannels.RBXGeneral:SendAsync("-gh 15548314241")
     end
 })
+
+    HatsTab:CreateButton({
+        Name = "Motorcycle",
+        Callback = function()
+            TextChat.TextChannels.RBXGeneral:SendAsync("-gh 4504231783, 11354413365, 191101707, 18209672127 ")
+    end
+})
 end
