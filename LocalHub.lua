@@ -5,10 +5,6 @@ local RunService = game:GetService("RunService")
 local HttpService = game:GetService("HttpService")
 local TextChat = game:GetService("TextChatService")
 
--- /// Preload
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/main/Preload.lua"))()
-
 -- /// Rayfield
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
 local Window = Rayfield:CreateWindow({
