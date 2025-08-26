@@ -571,9 +571,16 @@ genTab:CreateParagraph({
 genTab:CreateDivider()
 
 genTab:CreateButton({
-    Name = "Motorcycle",
+    Name = "Ban Hammer",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Ban%20Hammer"))()
+        end
+    })
+
+genTab:CreateButton({
+    Name = "Motorcycle",
+    Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Motorcycle"))()
         end
     })
 
