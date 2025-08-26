@@ -5,7 +5,7 @@ local RunService = game:GetService("RunService")
 local HttpService = game:GetService("HttpService")
 local TextChat = game:GetService("TextChatService")
 
--- /// Blacklist & DevTag
+-- /// Essential
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/Blacklist.lua"))()
 
