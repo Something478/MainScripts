@@ -64,7 +64,10 @@ UICornerButton.Parent = EnterButton
 local ValidKey = "Local-Hub-Key_19dj2oejiwksu91kjfi2kshk119kdiqlsk91lzlcmm.znid9*((#)*!919sjdk01skk0qozkcltp302iwlglyp40wishcjt9493inno229aklfpt93uwjfkt0493nkgpt93u2skfp492uejot0e8wiwxkkgp3jqgzxyuf932bsgyf8rptplgjdhwue7ritkxnshwitotkdhuwiro1uis9co5o3028w7ufi39291izuxjmf029zjnci3382627"
 
 local function notif(title,text)
-    StarterGui:SetCore("SendNotification",{Title=title,Text=text,Duration=5})
+    StarterGui:SetCore("SendNotification",{ Title = title,
+  Text = text,
+   Duration=5
+})
 end
 
 local function loadHub()
