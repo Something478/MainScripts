@@ -593,7 +593,7 @@ genTab:CreateButton({
 
 genTab:CreateParagraph({
     Title = "Keybinds",
-    Content = "No keybinds"
+    Content = "Z"
 })
 
 -- /// Rigs tab
