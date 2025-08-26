@@ -70,7 +70,7 @@ end
 local function loadHub()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/Blacklist.lua"))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/main/DevTag.lua"))()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MainScripts/main/LocalHub.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MainScripts/refs/heads/main/LocalHub/hub.lua"))()
 end
 
 local function checkKey()
