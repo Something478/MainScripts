@@ -426,6 +426,7 @@ myTab:CreateButton({
 })
 
 -- /// Keyboards tab
+
 local keyTab = Window:CreateTab("Keyboards")
 
 keyTab:CreateButton({
@@ -465,7 +466,7 @@ keyTab:CreateButton({
 
 if Place == 88308889239232 or Place == 17574618959 then
 
-    -- /// PermaDeath tab
+-- /// PermaDeath tab
 
 local pdTab = Window:CreateTab("PermaDeath")
 
@@ -495,7 +496,7 @@ pdTab:CreateParagraph({
     Content = "To the owner of the script (I forgot his name)"
 })
 
-    -- /// Genesis tab
+-- /// Genesis tab
 
 local genTab = Window:CreateTab("Genesis")
 
@@ -570,18 +571,13 @@ genTab:CreateParagraph({
 genTab:CreateDivider()
 
 genTab:CreateButton({
-    Name = "+︱Ban Hammer",
+    Name = "Motorcycle",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Ban%20Hammer"))()
         end
     })
 
-genTab:CreateParagraph({
-    Title = "Keybinds",
-    Content = "E, R"
-})
-
-    -- /// Rigs tab
+-- /// Rigs tab
 
     local HatsTab = Window:CreateTab("Genesis rigs")
 
