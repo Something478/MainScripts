@@ -74,7 +74,7 @@ local function loadHub()
 end
 
 local function checkKey()
-    if TextBox.Text == hiddenKey then
+    if TextBox.Text == ValidKey then
         Frame:Destroy()
         notif("Local Hub","Valid key!")
         task.wait(0.5)
