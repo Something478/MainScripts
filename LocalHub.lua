@@ -585,29 +585,29 @@ if Place == 88308889239232 or Place == 17574618959 then
         Name = "PermaDeath",
         Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-pd")
-        end
-    })
+    end
+})
 
     HatsTab:CreateButton({
         Name = "Remove Hats",
         Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-ch")
-        end
-    })
+    end
+})
 
     HatsTab:CreateButton({
         Name = "Respawn",
         Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-re")
-        end
-    })
+    end
+})
 
     HatsTab:CreateButton({
         Name = "Save hats",
         Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-sh")
-        end
-    })
+    end
+})
 
     HatsTab:CreateDivider()
 
@@ -620,15 +620,15 @@ if Place == 88308889239232 or Place == 17574618959 then
         Name = "Genesis Rigs",
         Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-gh 138364679836274 82942681251131 140395948277978 102599402682100 90960046381276 13058406993 ")
-        end
-    })
+    end
+})
 
     HatsTab:CreateButton({
         Name = "Genesis Rigs [Black]",
         Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-gh 131385506535381 85392395166623 129462518582032 138364679836274 12850150835 106249329428811 ")
-        end
-    })
+    end
+})
 
 local CustomRigs = HatsTab:CreateSection("Custom Rigs")
 
@@ -636,8 +636,22 @@ HatsTab:CreateButton({
         Name = "Genesis Rigs [Noob]",
         Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-gh 95290698984301, 84451219120140, 72292903231768, 108186273151388, 139904067056008 ")
-        end
-    })
+    end
+})
+
+HatsTab:CreateButton({ 
+        Name = "Genesis Rigs [Guest]", 
+        Callback = function()
+        game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -gh 13058406993 138364679836274 131385506535381 85392395166623 129462518582032 106249329428811 108224319902592 82404150383568 100856932339214")
+    end
+})
+
+HatsTab:CreateButton({ 
+      Name = "1x1x1x1 Rigs", 
+      Callback = function()
+        game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -gh 131385506535381 85392395166623 129462518582032 12850150835 106249329428811 17681457649 17532925923 16296624548")
+    end
+})
 
     HatsTab:CreateDivider()
 
@@ -645,34 +659,34 @@ HatsTab:CreateButton({
         Name = "Neptunian V",
         Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-gh 5316479641")
-        end
-    })
+    end
+})
 
     HatsTab:CreateButton({
         Name = "Sin Dragon",
         Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-gh 117186631495734 99965319383570 132770514241770 3756389957 14864581977 150381051 4504231783")
-        end
-    })
+    end
+})
 
     HatsTab:CreateButton({
         Name = "Lightning Cannon",
         Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-gh 111672581230926 126145101810389 136055191177936 4504231783")
-        end
-    })
+    end
+})
 
     HatsTab:CreateButton({
         Name = "Goner",
         Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-gh 17770317484 17822722698 17822749561 17772174303 17835236579")
-        end
-    })
+    end
+})
 
     HatsTab:CreateButton({
         Name = "Ban Hammer",
         Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-gh 15548314241")
-        end
-    })
+    end
+})
 end
