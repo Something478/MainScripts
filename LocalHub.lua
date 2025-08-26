@@ -577,12 +577,24 @@ genTab:CreateButton({
         end
     })
 
+genTab:CreateParagraph({
+    Title = "Keybinds",
+    Content = "E, R"
+})
+
+genTab:CreateDivider()
+ 
 genTab:CreateButton({
     Name = "Motorcycle",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Motorcycle"))()
         end
     })
+
+genTab:CreateParagraph({
+    Title = "Keybinds",
+    Content = "No keybinds"
+})
 
 -- /// Rigs tab
 
