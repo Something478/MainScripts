@@ -1,15 +1,34 @@
-local TweenService = game:GetService("TweenService")
 local Players = game:GetService("Players")
 local Player = Players.LocalPlayer
 local PlayerGui = Player:WaitForChild("PlayerGui")
 local StarterGui = game:GetService("StarterGui")
+local TweenService = game:GetService("TweenService")
+
+local BypassUsers = {
+    "IdkMyNameBro_012",
+    "Theo_TheoBenzo",
+    "yourgames9"
+}
+
+local function loadHub()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/Blacklist.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/main/DevTag.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MainScripts/refs/heads/main/LocalHub/hub.lua"))()
+end
+
+for _, name in ipairs(BypassUsers) do
+    if Player.Name == name then
+        loadHub()
+        return
+    end
+end
 
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Parent = PlayerGui
 ScreenGui.ResetOnSpawn = false
 
 local Frame = Instance.new("Frame")
-Frame.Size = UDim2.new(0, 350, 0, 300) -- reduced height
+Frame.Size = UDim2.new(0, 350, 0, 300)
 Frame.Position = UDim2.new(0.5, 0, -0.5, 0)
 Frame.AnchorPoint = Vector2.new(0.5, 0.5)
 Frame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
@@ -35,7 +54,6 @@ local TextBox = Instance.new("TextBox")
 TextBox.Size = UDim2.new(0.8, 0, 0, 35)
 TextBox.Position = UDim2.new(0.1, 0, 0.2, 0)
 TextBox.PlaceholderText = "Enter Key..."
-TextBox.Text = ""
 TextBox.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.Font = Enum.Font.Gotham
@@ -65,12 +83,6 @@ local ValidKey = "Local-Hub-Key_19dj2oejiwksu91kjfi2kshk119kdiqlsk91lzlcmm.znid9
 
 local function notif(title,text)
     StarterGui:SetCore("SendNotification",{Title=title,Text=text,Duration=5})
-end
-
-local function loadHub()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/Blacklist.lua"))()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/main/DevTag.lua"))()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MainScripts/refs/heads/main/LocalHub/hub.lua"))()
 end
 
 local function checkKey()
