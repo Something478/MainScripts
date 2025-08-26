@@ -7,7 +7,7 @@ local TextChat = game:GetService("TextChatService")
 
 -- /// Preload
 
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/main/Preload.lua"))()
 
 -- /// Rayfield
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
@@ -385,14 +385,14 @@ myTab:CreateSection("Item related")
 myTab:CreateButton({
     Name = "Kill Gui",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/KillGUI.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/KillGUI.lua"))()
     end
 })
 
 myTab:CreateButton({
     Name = "Dupe Gui",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/DupeGUI.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/DupeGUI.lua"))()
     end
 })
 
@@ -406,7 +406,7 @@ myTab:CreateSection("Reanimation")
 myTab:CreateButton({
     Name = "Giant Krystal Dance",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/GiantKD.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/GiantKD.lua"))()
     end
 })
 
@@ -415,14 +415,14 @@ myTab:CreateSection("Visual")
 myTab:CreateButton({
     Name = "Qwerty Mode",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/QwertyMode.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/QwertyMode.lua"))()
     end
 })
 
 myTab:CreateButton({
     Name = "CRD (Config Render Distance)",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/CRD.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/CRD.lua"))()
     end
 })
 
@@ -433,14 +433,14 @@ local keyTab = Window:CreateTab("Keyboards")
 keyTab:CreateButton({
     Name = "Byte Keyboard",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/ByteKeyboard.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/ByteKeyboard.lua"))()
     end
 })
 
 keyTab:CreateButton({
     Name = "Kilobyte Keyboard",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/KilobyteKeyboard.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/KilobyteKeyboard.lua"))()
     end
 })
 
@@ -474,7 +474,7 @@ local pdTab = Window:CreateTab("PermaDeath")
 pdTab:CreateButton({
     Name = "Krystal Dance",
     Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/KrystalDance.lua"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/KrystalDance.lua"))()
         end
     })
 
@@ -488,7 +488,7 @@ pdTab:CreateDivider()
 pdTab:CreateButton({
     Name = "+︱Nameless Animations V4",
     Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MyScripts/refs/heads/main/NamelessAnimationsV4.lua"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/NamelessAnimationsV4.lua"))()
         end
     })
 
@@ -667,14 +667,14 @@ HatsTab:CreateButton({
 HatsTab:CreateButton({ 
    Name = "Genesis Rigs [Guest]", 
    Callback = function()
-        game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -gh 13058406993 138364679836274 131385506535381 85392395166623 129462518582032 106249329428811 108224319902592 82404150383568 100856932339214")
+        game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 13058406993 138364679836274 131385506535381 85392395166623 129462518582032 106249329428811 108224319902592 82404150383568 100856932339214")
     end
 })
 
 HatsTab:CreateButton({ 
    Name = "Genesis Rigs [1x1x1x1]", 
    Callback = function()
-        game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -gh 131385506535381 85392395166623 129462518582032 12850150835 106249329428811 17681457649 17532925923 16296624548")
+        game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 131385506535381 85392395166623 129462518582032 12850150835 106249329428811 17681457649 17532925923 16296624548")
     end
 })
 
