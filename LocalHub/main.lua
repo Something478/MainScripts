@@ -64,28 +64,26 @@ UICornerButton.Parent = EnterButton
 local ValidKey = "Local-Hub-Key_19dj2oejiwksu91kjfi2kshk119kdiqlsk91lzlcmm.znid9*((#)*!919sjdk01skk0qozkcltp302iwlglyp40wishcjt9493inno229aklfpt93uwjfkt0493nkgpt93u2skfp492uejot0e8wiwxkkgp3jqgzxyuf932bsgyf8rptplgjdhwue7ritkxnshwitotkdhuwiro1uis9co5o3028w7ufi39291izuxjmf029zjnci3382627"
 
 local function notif(title,text)
-    StarterGui:SetCore("SendNotification",{ Title = title,
-  Text = text,
-   Duration=5
-})
+	StarterGui:SetCore("SendNotification",{Title=title,Text=text,Duration=5})
 end
 
 local function loadHub()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/Blacklist.lua"))()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/main/DevTag.lua"))()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MainScripts/refs/heads/main/LocalHub/hub.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/Blacklist.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/main/DevTag.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MainScripts/refs/heads/main/LocalHub/hub.lua"))()
 end
 
 local function checkKey()
-    if TextBox.Text == ValidKey then
-        Frame:Destroy()
-        notif("Local Hub","Valid key!")
-        task.wait(0.5)
-        notif("Local Hub","Loading hub...")
-        loadHub()
-    else
-        notif("Local Hub","Invalid Key!")
-    end
+	local entered = TextBox.Text:match("^%s*(.-)%s*$")
+	if entered == ValidKey then
+		Frame:Destroy()
+		notif("Local Hub","Valid key!")
+		task.wait(0.5)
+		notif("Local Hub","Loading hub...")
+		loadHub()
+	else
+		notif("Local Hub","Invalid Key!")
+	end
 end
 
 EnterButton.MouseButton1Click:Connect(checkKey)
@@ -105,8 +103,8 @@ DiscordCorner.CornerRadius = UDim.new(0, 10)
 DiscordCorner.Parent = DiscordButton
 
 DiscordButton.MouseButton1Click:Connect(function()
-    setclipboard("https://discord.gg/XXtB3Vth53")
-    notif("Discord","Link copied to clipboard!")
+	setclipboard("https://discord.gg/XXtB3Vth53")
+	notif("Discord","Link copied to clipboard!")
 end)
 
 local KeyGuideButton = Instance.new("TextButton")
@@ -124,10 +122,10 @@ KeyGuideCorner.CornerRadius = UDim.new(0, 10)
 KeyGuideCorner.Parent = KeyGuideButton
 
 KeyGuideButton.MouseButton1Click:Connect(function()
-    notif("Key Instructions","Join Discord server, go to Keys channel, copy and paste the key.")
+	notif("Key Instructions","Join Discord server, go to Keys channel, copy and paste the key.")
 end)
 
 local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Quint, Enum.EasingDirection.Out)
-local tweenGoal = { Position = UDim2.new(0.5, 0, 0.5, 0) }
+local tweenGoal = {Position=UDim2.new(0.5,0,0.5,0)}
 local tween = TweenService:Create(Frame, tweenInfo, tweenGoal)
 tween:Play()
