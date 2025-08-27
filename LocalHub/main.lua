@@ -79,15 +79,15 @@ local UICornerButton = Instance.new("UICorner")
 UICornerButton.CornerRadius = UDim.new(0, 10)
 UICornerButton.Parent = EnterButton
 
-local ValidKey = "Local-Hub-Key_19dj2oejiwksu91kjfi2kshk119kdiqlsk91lzlcmm.znid9*((#)*!919sjdk01skk0qozkcltp302iwlglyp40wishcjt9493inno229aklfpt93uwjfkt0493nkgpt93u2skfp492uejot0e8wiwxkkgp3jqgzxyuf932bsgyf8rptplgjdhwue7ritkxnshwitotkdhuwiro1uis9co5o3028w7ufi39291izuxjmf029zjnci3382627"
+local ValidKey = "LOCAL-HUB-ACCESS-KEY--2025--9DJ2OEJIW-SK919KFI2KSHK119KDIQLSK91LZLCMMZNID9SJK01SKK0QOZKCLTP302IW-LGLYP40WISHCJ-T9493INNO229AKLFPT93UWJFKT0493NK-GPT93U2SKFP492UEJOT0E8WIWXKKGP3JQGZXYUF932BSGYF8RPTPLGJDHWUE7RITKXNSHWITOTKDHUWIR"
 
 local function notif(title,text)
     StarterGui:SetCore("SendNotification",{Title=title,Text=text,Duration=5})
 end
 
 local function checkKey()
-    local entered = TextBox.Text:match("^%s*(.-)%s*$")
-    if entered == ValidKey then
+    local entered = (TextBox.Text or ""):gsub("^%s*(.-)%s*$", "%1")
+    if entered:lower() == ValidKey:lower() then
         Frame:Destroy()
         notif("Local Hub","Valid key!")
         task.wait(0.5)
