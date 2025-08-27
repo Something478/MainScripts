@@ -409,12 +409,11 @@ myTab:CreateButton({
 myTab:CreateSection("BetterRoblox")
 
 myTab:CreateButton({
-    Name = "1st Person Mode",
+    Name = "Realistic Mode (1st Person)",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/QwertyMode.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/RealisticMode.lua"))()
     end
 })
-
 
 myTab:CreateButton({
     Name = "Inventory",
@@ -423,7 +422,7 @@ myTab:CreateButton({
     end
 })
 
--- /// Keyboards tab
+-- /// Keyboards
 
 local keyTab = Window:CreateTab("Keyboards")
 
@@ -464,7 +463,7 @@ keyTab:CreateButton({
 
 if Place == 88308889239232 or Place == 17574618959 then
 
--- /// PermaDeath tab
+-- /// PermaDeath
 
 local pdTab = Window:CreateTab("PermaDeath")
 
@@ -496,7 +495,7 @@ pdTab:CreateButton({
         end
     })
 
--- /// Genesis tab
+-- /// Genesis
 
 local genTab = Window:CreateTab("Genesis")
 
@@ -598,7 +597,7 @@ genTab:CreateParagraph({
 
 -- /// Rigs tab
 
-    local HatsTab = Window:CreateTab("Genesis rigs")
+    local HatsTab = Window:CreateTab("Hats and Rigs")
 
 HatsTab:CreateParagraph({
     Title = "IMPORTANT",
