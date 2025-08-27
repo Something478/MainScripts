@@ -498,6 +498,13 @@ pdTab:CreateButton({
         end
     })
 
+pdTab:CreateButton({
+    Name = "Reanimate for Caducus",
+    Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/Reanimate.lua"))()
+        end
+    })
+
 -- /// Genesis tab
 
 local genTab = Window:CreateTab("Genesis")
