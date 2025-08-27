@@ -406,12 +406,20 @@ myTab:CreateButton({
     end
 })
 
-myTab:CreateSection("Visual")
+myTab:CreateSection("BetterRoblox")
 
 myTab:CreateButton({
-    Name = "Qwerty Mode",
+    Name = "1st Person Mode",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/QwertyMode.lua"))()
+    end
+})
+
+
+myTab:CreateButton({
+    Name = "Inventory",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/Inventory.lua"))()
     end
 })
 
