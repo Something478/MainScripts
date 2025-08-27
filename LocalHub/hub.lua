@@ -483,15 +483,6 @@ pdTab:CreateParagraph({
 pdTab:CreateDivider()
 
 pdTab:CreateButton({
-    Name = "Nameless Animations V4",
-    Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/NamelessAnimationsV4.lua"))()
-        end
-    })
-
-pdTab:CreateDivider()
-
-pdTab:CreateButton({
     Name = "Caducus",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/Caducus.lua"))()
@@ -524,7 +515,7 @@ genTab:CreateParagraph({
 genTab:CreateDivider()
 
 genTab:CreateButton({
-    Name = "+︱Neptunian V",
+    Name = "Neptunian V",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Neptunian%20V"))()
         end
@@ -538,7 +529,7 @@ genTab:CreateParagraph({
 genTab:CreateDivider()
 
 genTab:CreateButton({
-    Name = "+︱Sin Dragon",
+    Name = "Sin Dragon",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Sin%20Dragon"))()
         end
@@ -552,7 +543,7 @@ genTab:CreateParagraph({
     genTab:CreateDivider()
 
 genTab:CreateButton({
-    Name = "+︱Lightning Cannon",
+    Name = "Lightning Cannon",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Lightning%20Cannon"))()
         end
@@ -566,7 +557,7 @@ genTab:CreateParagraph({
 genTab:CreateDivider()
 
 genTab:CreateButton({
-    Name = "+︱Goner",
+    Name = "Goner",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Goner"))()
         end
@@ -632,6 +623,13 @@ HatsTab:CreateButton({
    Name = "Respawn",
    Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("-re")
+    end
+})
+
+HatsTab:CreateButton({
+   Name = "Net",
+   Callback = function()
+            TextChat.TextChannels.RBXGeneral:SendAsync("-net")
     end
 })
 
