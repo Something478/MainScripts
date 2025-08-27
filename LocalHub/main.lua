@@ -5,6 +5,7 @@ local StarterGui = game:GetService("StarterGui")
 local TweenService = game:GetService("TweenService")
 
 local BypassUsers = {
+    "IdkMyNameBro_012",
     "Theo_TheoBenzo",
     "yourgames9"
 }
