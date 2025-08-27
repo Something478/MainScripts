@@ -423,13 +423,6 @@ myTab:CreateButton({
     end
 })
 
-myTab:CreateButton({
-    Name = "CRD (Config Render Distance)",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/CRD.lua"))()
-    end
-})
-
 -- /// Keyboards tab
 
 local keyTab = Window:CreateTab("Keyboards")
@@ -484,29 +477,33 @@ pdTab:CreateButton({
 
 pdTab:CreateParagraph({
     Title = "Credits",
-    Content = "To MrY7zz for fixed KDV3, and to MZHA on scriptblox for working reanimation."
+    Content = "To MrY7zz for fixed KDV3, and to mzha on scriptblox for working reanimation."
     })
 
 pdTab:CreateDivider()
 
 pdTab:CreateButton({
-    Name = "+︱Nameless Animations V4",
+    Name = "Nameless Animations V4",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/NamelessAnimationsV4.lua"))()
         end
     })
 
-pdTab:CreateParagraph({
-    Title = "Credits",
-    Content = "To the owner of the script (I forgot his name)"
-})
+pdTab:CreateDivider()
+
+pdTab:CreateButton({
+    Name = "Caducus",
+    Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/Caducus.lua"))()
+        end
+    })
 
 -- /// Genesis tab
 
 local genTab = Window:CreateTab("Genesis")
 
 genTab:CreateButton({
-    Name = "+︱Krystal Dance",
+    Name = "Krystal Dance",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Krystal%20Dance"))()
         end
