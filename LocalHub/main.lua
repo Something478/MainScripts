@@ -2,12 +2,7 @@ local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
 local StarterGui = game:GetService("StarterGui")
 
-local Player = Players.LocalPlayer
-if not Player then
-    Players.PlayerAdded:Wait()
-    Player = Players.LocalPlayer
-end
-
+local Player = Players.LocalPlayer or Players.PlayerAdded:Wait()
 local PlayerGui = Player:WaitForChild("PlayerGui")
 
 local BypassUsers = {
@@ -26,8 +21,8 @@ end
 local function loadHub()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/Blacklist.lua"))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/main/DevTag.lua"))()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MainScripts/refs/heads/main/LocalHub/hub.lua"))()
-    end)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MainScripts/refs/heads/main/LocalHub/hub.lua"))()
+end
 
 for _, name in ipairs(BypassUsers) do
     if Player.Name == name then
