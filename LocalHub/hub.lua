@@ -24,7 +24,7 @@ local Window = Rayfield:CreateWindow({
     KeySystem = false
 })
 
--- /// Actual default theme
+-- /// Default theme: Outer space [Blue]
 
 Window:ModifyTheme {
     TextColor = Color3.fromRGB(255, 255, 255),
