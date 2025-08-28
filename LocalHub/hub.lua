@@ -409,22 +409,24 @@ myTab:CreateButton({
 myTab:CreateSection("Visual")
 
 myTab:CreateButton({
-    Name = "Qwerty Mode",
+    Name = "Realistic Mode (1st person)",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/QwertyMode.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/RealisticMode.lua"))()
     end
 })
 
 myTab:CreateButton({
-    Name = "CRD (Config Render Distance)",
+    Name = "Inventory",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/CRD.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/Inventory.lua"))()
     end
 })
 
 -- /// Keyboards tab
 
 local keyTab = Window:CreateTab("Keyboards")
+
+keyTab:CreateSection("My keyboards")
 
 keyTab:CreateButton({
     Name = "Byte Keyboard",
@@ -439,6 +441,8 @@ keyTab:CreateButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/KilobyteKeyboard.lua"))()
     end
 })
+
+keyTab:CreateSection("Other keyboards")
 
 keyTab:CreateButton({
     Name = "Delta Keyboard",
@@ -479,26 +483,12 @@ pdTab:CreateParagraph({
     Content = "To MrY7zz for fixed KDV3, and to MZHA on scriptblox for working reanimation."
     })
 
-pdTab:CreateDivider()
-
-pdTab:CreateButton({
-    Name = "+︱Nameless Animations V4",
-    Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/NamelessAnimationsV4.lua"))()
-        end
-    })
-
-pdTab:CreateParagraph({
-    Title = "Credits",
-    Content = "To the owner of the script (I forgot his name)"
-})
-
 -- /// Genesis tab
 
 local genTab = Window:CreateTab("Genesis")
 
 genTab:CreateButton({
-    Name = "+︱Krystal Dance",
+    Name = "Krystal Dance",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Krystal%20Dance"))()
         end
@@ -512,7 +502,7 @@ genTab:CreateParagraph({
 genTab:CreateDivider()
 
 genTab:CreateButton({
-    Name = "+︱Neptunian V",
+    Name = "Neptunian V",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Neptunian%20V"))()
         end
@@ -526,7 +516,7 @@ genTab:CreateParagraph({
 genTab:CreateDivider()
 
 genTab:CreateButton({
-    Name = "+︱Sin Dragon",
+    Name = "Sin Dragon",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Sin%20Dragon"))()
         end
@@ -540,7 +530,7 @@ genTab:CreateParagraph({
     genTab:CreateDivider()
 
 genTab:CreateButton({
-    Name = "+︱Lightning Cannon",
+    Name = "Lightning Cannon",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Lightning%20Cannon"))()
         end
@@ -554,7 +544,7 @@ genTab:CreateParagraph({
 genTab:CreateDivider()
 
 genTab:CreateButton({
-    Name = "+︱Goner",
+    Name = "Goner",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Goner"))()
         end
