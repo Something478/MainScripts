@@ -7,11 +7,44 @@ local TextChat = game:GetService("TextChatService")
 
 -- /// Rayfield
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
+
 local Window = Rayfield:CreateWindow({
     Name = "Local Hub",
     LoadingTitle = "Local Hub",
     LoadingSubtitle = "By ChillbyteHD",
-    Theme = "Amethyst",
+    Theme = {
+        TextColor = Color3.fromRGB(255, 255, 255),
+        Background = Color3.fromRGB(0, 0, 0),
+        Topbar = Color3.fromRGB(0, 0, 0),
+        Shadow = Color3.fromRGB(0, 0, 0),
+        NotificationBackground = Color3.fromRGB(0, 0, 0),
+        NotificationActionsBackground = Color3.fromRGB(0, 0, 125),
+        TabBackground = Color3.fromRGB(0, 0, 0),
+        TabStroke = Color3.fromRGB(0, 0, 255),
+        TabBackgroundSelected = Color3.fromRGB(0, 0, 133),
+        TabTextColor = Color3.fromRGB(255, 255, 255),
+        SelectedTabTextColor = Color3.fromRGB(255, 255, 255),
+        ElementBackground = Color3.fromRGB(15, 15, 15),
+        ElementBackgroundHover = Color3.fromRGB(40, 40, 40),
+        SecondaryElementBackground = Color3.fromRGB(0, 0, 0),
+        ElementStroke = Color3.fromRGB(0, 0, 150),
+        SecondaryElementStroke = Color3.fromRGB(0, 0, 255),
+        SliderBackground = Color3.fromRGB(0, 0, 0),
+        SliderProgress = Color3.fromRGB(0, 0, 255),
+        SliderStroke = Color3.fromRGB(0, 0, 255),
+        ToggleBackground = Color3.fromRGB(0, 0, 130),
+        ToggleEnabled = Color3.fromRGB(0, 0, 255),
+        ToggleDisabled = Color3.fromRGB(0, 0, 120),
+        ToggleEnabledStroke = Color3.fromRGB(0, 0, 140),
+        ToggleDisabledStroke = Color3.fromRGB(0, 0, 120),
+        ToggleEnabledOuterStroke = Color3.fromRGB(0, 0, 120),
+        ToggleDisabledOuterStroke = Color3.fromRGB(0, 0, 90),
+        DropdownSelected = Color3.fromRGB(0, 0, 255),
+        DropdownUnselected = Color3.fromRGB(0, 0, 0),
+        InputBackground = Color3.fromRGB(0, 0, 0),
+        InputStroke = Color3.fromRGB(0, 0, 255),
+        PlaceholderColor = Color3.fromRGB(0, 0, 255)
+    },
     ToggleUIKeybind = Enum.KeyCode.P,
     DisableRayfieldPrompts = false,
     DisableBuildWarnings = false,
@@ -37,6 +70,7 @@ local function setupToolListener(char)
     if toolFriend then
         toolFriend:Disconnect()
     end
+
     toolFriend = char.ChildAdded:Connect(function(child)
         if preventToolsEnabled and child:IsA("Tool") then
             local humanoid = getHumanoid(char)
@@ -58,6 +92,7 @@ end
 charFriend = player.CharacterAdded:Connect(onCharacterAdded)
 
 local Place = game.PlaceId
+
 
 -- /// Home Tab
 local HomeTab = Window:CreateTab("Home")
@@ -83,17 +118,19 @@ if Place == 88308889239232 or Place == 17574618959 then
 end
 
 HomeTab:CreateSection("Info")
+
 HomeTab:CreateParagraph({
     Title = "Roblox User",
     Content = "ChillbyteHD (IdkMyNameBro_012)"
 })
+
 HomeTab:CreateParagraph({
     Title = "Discord User",
     Content = "ChillbyteHD"
 })
+
 HomeTab:CreateDivider()
 
--- /// Safe SendAsync function
 local function safeSendAsync(msg)
     local channel = TextChat.TextChannels:FindFirstChild("RBXGeneral")
     if channel then
@@ -191,7 +228,6 @@ HomeTab:CreateInput({
 })
 
 -- /// Themes Section
-
 local ThemesSection = HomeTab:CreateSection("Themes Section")
 
 HomeTab:CreateButton({
@@ -200,24 +236,28 @@ HomeTab:CreateButton({
         Window.ModifyTheme('Ocean')
     end,
 })
+
 HomeTab:CreateButton({
     Name = "Bloom",
     Callback = function()
         Window.ModifyTheme('Bloom')
     end,
 })
+
 HomeTab:CreateButton({
     Name = "Dark Blue",
     Callback = function()
         Window.ModifyTheme('DarkBlue')
     end,
 })
+
 HomeTab:CreateButton({
     Name = "Amethyst",
     Callback = function()
         Window.ModifyTheme('Amethyst')
     end,
 })
+
 HomeTab:CreateButton({
     Name = "Serenity",
     Callback = function()
@@ -226,7 +266,6 @@ HomeTab:CreateButton({
 })
 
 -- /// Custom Themes Section
-
 local CustomThemesSection = HomeTab:CreateSection("Custom Themes Section")
 
 HomeTab:CreateButton({
@@ -267,6 +306,7 @@ HomeTab:CreateButton({
         }
     end,
 })
+
 HomeTab:CreateButton({
     Name = "Outer Space [Blue]",
     Callback = function()
