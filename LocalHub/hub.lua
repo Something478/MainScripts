@@ -147,27 +147,27 @@ HomeTab:CreateButton({
 HomeTab:CreateButton({
    Name = "Respawn",
    Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("-re")
+            TextChat.TextChannels.RBXGeneral:SendAsync("/e -re")
     end
 })
 
 HomeTab:CreateButton({
     Name = "Remove Hats",
     Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("-ch")
+            TextChat.TextChannels.RBXGeneral:SendAsync("/e -ch")
     end
 })
 
 HomeTab:CreateButton({
    Name = "Save hats",
    Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("-sh")
+            TextChat.TextChannels.RBXGeneral:SendAsync("/e -sh")
     end
 })
 HomeTab:CreateButton({
     Name = "PermaDeath",
     Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("-pd")
+            TextChat.TextChannels.RBXGeneral:SendAsync("/e -pd")
     end
 })
 end
