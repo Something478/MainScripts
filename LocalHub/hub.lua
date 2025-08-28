@@ -43,7 +43,7 @@ local Window = Rayfield:CreateWindow({
     InputBackground = Color3.fromRGB(0, 0, 0),
     InputStroke = Color3.fromRGB(0, 0, 255),
     PlaceholderColor = Color3.fromRGB(0, 0, 255)
-}
+},
     ToggleUIKeybind = Enum.KeyCode.B,
     DisableRayfieldPrompts = false,
     DisableBuildWarnings = false,
