@@ -539,6 +539,15 @@ EtcTab:CreateButton({
         end
     })
 
+EtcTab:CreateSection("Avatars")
+
+EtcTab:CreateButton({
+    Name = "1x1x1x1",
+    Callback = function()
+    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -gh 17681457649, 102625293938800 ")
+        end
+    })
+
 local ChTab = Window:CreateTab("Changelog")
 
 chTab:CreateParagraph({
