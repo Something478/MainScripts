@@ -11,7 +11,6 @@ end
 local PlayerGui = Player:WaitForChild("PlayerGui")
 
 local BypassUsers = {
-    "IdkMyNameBro_012",
     "Theo_TheoBenzo",
     "yourgames9"
 }
