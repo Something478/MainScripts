@@ -92,7 +92,7 @@ local Place = game.PlaceId
 local ReadTab = Window:CreateTab("READ")
 
 if Place ~= 88308889239232 and Place ~= 17574618959 then
-    HomeTab:CreateParagraph({
+    ReadTab:CreateParagraph({
         Title = "❗︱Game Not Supported",
         Content = "Some features from this hub are removed."
     })
