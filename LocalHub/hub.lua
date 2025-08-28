@@ -583,7 +583,7 @@ GenTab:CreateParagraph({
     Content = "G, Z, X, C"
 })
 
-    genTab:CreateDivider()
+GenTab:CreateDivider()
 
 GenTab:CreateButton({
     Name = "Lightning Cannon",
