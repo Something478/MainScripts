@@ -11,22 +11,7 @@ local Window = Rayfield:CreateWindow({
     Name = "Local Hub",
     LoadingTitle = "Local Hub",
     LoadingSubtitle = "By ChillbyteHD",
-    Theme = "DarkBlue",
-    ToggleUIKeybind = Enum.KeyCode.B,
-    DisableRayfieldPrompts = false,
-    DisableBuildWarnings = false,
-    ConfigurationSaving = {
-        Enabled = true,
-        FolderName = "LocalHub",
-        FileName = "Settings"
-    },
-    Discord = {Enabled = false},
-    KeySystem = false
-})
-
--- /// Default theme: Outer space [Blue]
-
-Window:ModifyTheme {
+    Theme = {
     TextColor = Color3.fromRGB(255, 255, 255),
     Background = Color3.fromRGB(0, 0, 0),
     Topbar = Color3.fromRGB(0, 0, 0),
@@ -58,7 +43,18 @@ Window:ModifyTheme {
     InputBackground = Color3.fromRGB(0, 0, 0),
     InputStroke = Color3.fromRGB(0, 0, 255),
     PlaceholderColor = Color3.fromRGB(0, 0, 255)
-}
+    },
+    ToggleUIKeybind = Enum.KeyCode.B,
+    DisableRayfieldPrompts = false,
+    DisableBuildWarnings = false,
+    ConfigurationSaving = {
+        Enabled = true,
+        FolderName = "LocalHub",
+        FileName = "Settings"
+    },
+    Discord = {Enabled = false},
+    KeySystem = false
+})
 
 local player = Players.LocalPlayer
 local preventToolsEnabled = false
