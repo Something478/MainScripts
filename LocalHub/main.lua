@@ -15,16 +15,25 @@ local BypassUsers = {
     "yourgames9"
 }
 
+local function notif(title, text)
+    StarterGui:SetCore("SendNotification", {
+        Title = title,
+        Text = text,
+        Duration = 5
+    })
+end
+
 local function loadHub()
-    pcall(function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/Blacklist.lua"))()
-    end)
-    pcall(function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/main/DevTag.lua"))()
-    end)
-    pcall(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/Blacklist.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/main/DevTag.lua"))()
+
+    local success = pcall(function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MainScripts/refs/heads/main/LocalHub/hub.lua"))()
     end)
+
+    if not success then
+        notif("Local Hub", "Currently Local Hub is down, sorry")
+    end
 end
 
 for _, name in ipairs(BypassUsers) do
@@ -69,6 +78,7 @@ TextBox.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.Font = Enum.Font.Gotham
 TextBox.TextSize = 16
+TextBox.Text = ""
 TextBox.ClipsDescendants = true
 TextBox.Parent = Frame
 
@@ -92,14 +102,6 @@ UICornerButton.Parent = EnterButton
 
 local ValidKey = "LOCAL-HUB-ACCESS-KEY--2025--9DJ2OEJIW-SK919KFI2KSHK119KDIQLSK91LZLCMMZNID9SJK01SKK0QOZKCLTP302IW-LGLYP40WISHCJ-T9493INNO229AKLFPT93UWJFKT0493NK-GPT93U2SKFP492UEJOT0E8WIWXKKGP3JQGZXYUF932BSGYF8RPTPLGJDHWUE7RITKXNSHWITOTKDHUWIR"
 
-local function notif(title, text)
-    StarterGui:SetCore("SendNotification", {
-        Title = title,
-        Text = text,
-        Duration = 5
-    })
-end
-
 local function checkKey()
     local entered = (TextBox.Text or ""):gsub("^%s*(.-)%s*$", "%1")
     if entered:lower() == ValidKey:lower() then
@@ -110,14 +112,6 @@ local function checkKey()
         notif("Local Hub", "Invalid Key!")
     end
 end
-
-pcall(function()
-    local clip = tostring(readclipboard() or "")
-    if clip:lower():find(ValidKey:lower()) then
-        TextBox.Text = ValidKey
-        checkKey()
-    end
-end)
 
 EnterButton.MouseButton1Click:Connect(checkKey)
 
