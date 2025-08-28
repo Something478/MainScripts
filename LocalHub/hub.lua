@@ -55,61 +55,85 @@ charFriend = player.CharacterAdded:Connect(onCharacterAdded)
 
 local Place = game.PlaceId
 
--- /// Home Tab
+-- /// Read Tab
 
-local HomeTab = Window:CreateTab("Home")
+local ReadTab = Window:CreateTab("READ")
 
 if Place ~= 88308889239232 and Place ~= 17574618959 then
     HomeTab:CreateParagraph({
-        Title = "Game Not Supported",
+        Title = "❗︱Game Not Supported",
         Content = "Some features from this hub are removed."
     })
     HomeTab:CreateDivider()
 end
 
-HomeTab:CreateParagraph({
-    Title = "!! PLEASE READ THIS !!",
+ReadTab:CreateParagraph({
+    Title = "‼️ PLEASE READ THIS ‼️",
     Content = "I DO NOT OWN THE SCRIPTS IN THIS SCRIPT!!! ALL CREDIT GOES TO RESPECTIVE OWNERS OF THE SCRIPTS!!"
 })
 
 if Place == 88308889239232 or Place == 17574618959 then
-    HomeTab:CreateParagraph({
+    ReadTab:CreateParagraph({
         Title = "How to use this hub? 🤔",
-        Content = "If you're gonna use genesis, go to the Genesis rigs tab, once your done loading the hats and rigs, head to the Genesis tab and execute the scripts there!!"
+        Content = "If you're gonna use genesis, go to the Genesis rigs tab, once your done loading the hats and rigs, head to the Genesis tab and execute the scripts there!!1!"
+    })
+
+ReadTab:CreateSection("Other")
+
+ReadTab:CreateParagraph({
+    Title = "‼️ Notice ‼️",
+    Content = "Credits to Theo for the idea of adding genesis, he's a cool guy make sure to check out his hub too! :)"
     })
 end
 
-HomeTab:CreateParagraph({
-    Title = "Shortcut",
-    Content = "+︱Needs a keyboard & will have keybinds\n-︱Doesn't need a keyboard & will not have keybinds"
-})
+ReadTab:CreateSection("Info")
 
-if Place == 88308889239232 or Place == 17574618959 then
-    HomeTab:CreateSection("Other")
-    HomeTab:CreateParagraph({
-        Title = "!! Notice !!",
-        Content = "Credits to Theo for the idea of adding genesis, he's a cool guy make sure to check out his hub too! :)"
-    })
-end
-
-HomeTab:CreateSection("Info")
-HomeTab:CreateParagraph({
-    Title = "Roblox User",
-    Content = "ChillbyteHD (IdkMyNameBro_012)"
+ReadTab:CreateParagraph({
+    Title = "ℹ️︱Roblox Username",
+    Content = "IdkMyNameBro_012"
 })
-HomeTab:CreateParagraph({
-    Title = "Discord User",
+ReadTab:CreateParagraph({
+    Title = "ℹ️︱Discord Username",
     Content = "ChillbyteHD"
 })
-HomeTab:CreateDivider()
+
+local HomeTab = Window:CreateTab("Home")
 
 if Place == 17574618959 or Place == 88308889239232 then
-    HomeTab:CreateButton({
-        Name = "Sit",
-        Callback = function()
+
+HomeTab:CreateButton({
+    Name = "Sit",
+    Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("/e -sit")
         end,
     })
+
+HomeTab:CreateButton({
+   Name = "Respawn",
+   Callback = function()
+            TextChat.TextChannels.RBXGeneral:SendAsync("-re")
+    end
+})
+
+HomeTab:CreateButton({
+    Name = "Remove Hats",
+    Callback = function()
+            TextChat.TextChannels.RBXGeneral:SendAsync("-ch")
+    end
+})
+
+HomeTab:CreateButton({
+   Name = "Save hats",
+   Callback = function()
+            TextChat.TextChannels.RBXGeneral:SendAsync("-sh")
+    end
+})
+HomeTab:CreateButton({
+    Name = "PermaDeath",
+    Callback = function()
+            TextChat.TextChannels.RBXGeneral:SendAsync("-pd")
+    end
+})
 end
 
 local Toggle = HomeTab:CreateToggle({
@@ -376,7 +400,7 @@ MainTab:CreateButton({
 -- /// My Tab
 
 local myTab = Window:CreateTab("Made by me")
-myTab:CreateSection("Item related")
+myTab:CreateSection("GUIs")
 
 myTab:CreateButton({
     Name = "Kill Gui",
@@ -406,7 +430,7 @@ myTab:CreateButton({
     end
 })
 
-myTab:CreateSection("Visual")
+myTab:CreateSection("BetterRoblox")
 
 myTab:CreateButton({
     Name = "Realistic Mode (1st person)",
@@ -485,107 +509,107 @@ pdTab:CreateParagraph({
 
 -- /// Genesis tab
 
-local genTab = Window:CreateTab("Genesis")
+local GenTab = Window:CreateTab("Genesis")
 
-genTab:CreateButton({
+GenTab:CreateButton({
     Name = "Krystal Dance",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Krystal%20Dance"))()
         end
     })
 
-genTab:CreateParagraph({
+GenTab:CreateParagraph({
     Title = "Keybinds",
     Content = "Q, E, R, T, Y, U, P, F, G, H, J, K, L"
 })
 
-genTab:CreateDivider()
+GenTab:CreateDivider()
 
-genTab:CreateButton({
+GenTab:CreateButton({
     Name = "Neptunian V",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Neptunian%20V"))()
         end
     })
 
-genTab:CreateParagraph({
+GenTab:CreateParagraph({
     Title = "Keybinds",
     Content = "F, Z, X, R"
 })
 
-genTab:CreateDivider()
+GenTab:CreateDivider()
 
-genTab:CreateButton({
+GenTab:CreateButton({
     Name = "Sin Dragon",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Sin%20Dragon"))()
         end
     })
 
-genTab:CreateParagraph({
+GenTab:CreateParagraph({
     Title = "Keybinds",
     Content = "G, Z, X, C"
 })
 
     genTab:CreateDivider()
 
-genTab:CreateButton({
+GenTab:CreateButton({
     Name = "Lightning Cannon",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Lightning%20Cannon"))()
         end
     })
 
-genTab:CreateParagraph({
+GenTab:CreateParagraph({
     Title = "Keybinds",
     Content = "E, Z, X, C, V, B, M"
 })
 
-genTab:CreateDivider()
+GenTab:CreateDivider()
 
-genTab:CreateButton({
+GenTab:CreateButton({
     Name = "Goner",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Goner"))()
         end
     })
 
-genTab:CreateParagraph({
+GenTab:CreateParagraph({
     Title = "Keybinds",
     Content = "Q"
 })
 
-genTab:CreateDivider()
+GenTab:CreateDivider()
 
-genTab:CreateButton({
+GenTab:CreateButton({
     Name = "Ban Hammer",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Ban%20Hammer"))()
         end
     })
 
-genTab:CreateParagraph({
+GenTab:CreateParagraph({
     Title = "Keybinds",
     Content = "E, R"
 })
 
-genTab:CreateDivider()
+GenTab:CreateDivider()
 
-genTab:CreateButton({
+GenTab:CreateButton({
     Name = "Motorcycle",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Motorcycle"))()
         end
     })
 
-genTab:CreateParagraph({
+GenTab:CreateParagraph({
     Title = "Keybinds",
     Content = "Z"
 })
 
 -- /// Rigs tab
 
-    local HatsTab = Window:CreateTab("Genesis rigs")
+local HatsTab = Window:CreateTab("Hats and Rigs")
 
 HatsTab:CreateParagraph({
     Title = "IMPORTANT",
@@ -712,6 +736,11 @@ end
 local ChTab = Window:CreateTab("ChangeLog")
 
 ChTab:CreateParagraph({
-    Title = "Changelog 2.1",
+    Title = "Changelog 2.2",
     Content = "Added Motorcycle."
+})
+
+ChTab:CreateParagraph({
+    Title = "Changelog 2.1",
+    Content = "Added BetterRoblox section"
 })
