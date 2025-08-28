@@ -199,14 +199,6 @@ local Input = HomeTab:CreateInput({
         player.Character.Humanoid.WalkSpeed = tonumber(Text) or 16
     end,
 })
-local Input = HomeTab:CreateInput({
-    Name = "JumpPower",
-    PlaceholderText = "1-500",
-    RemoveTextAfterFocusLost = true,
-    Callback = function(Text)
-        player.Character.Humanoid.JumpPower = tonumber(Text) or 50
-    end,
-})
 
 -- /// Themes Section
 
