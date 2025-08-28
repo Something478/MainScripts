@@ -550,7 +550,7 @@ EtcTab:CreateButton({
 
 local ChTab = Window:CreateTab("Changelog")
 
-chTab:CreateParagraph({
+ChTab:CreateParagraph({
     Title = "Changelog 2.1",
     Content = "- Removed Genesis"
 })
