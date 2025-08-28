@@ -45,7 +45,7 @@ ScreenGui.Parent = PlayerGui
 ScreenGui.ResetOnSpawn = false
 
 local Frame = Instance.new("Frame")
-Frame.Size = UDim2.new(0, 350, 0, 300)
+Frame.Size = UDim2.new(0, 350, 0, 400)
 Frame.Position = UDim2.new(0.5, 0, -0.5, 0)
 Frame.AnchorPoint = Vector2.new(0.5, 0.5)
 Frame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
@@ -96,7 +96,7 @@ local UICornerButton = Instance.new("UICorner")
 UICornerButton.CornerRadius = UDim.new(0, 10)
 UICornerButton.Parent = EnterButton
 
-local ValidKey = "LOCAL-HUB-ACCESS-KEY--2025--9DJ2OEJIW-SK919KFI2KSHK119KDIQLSK91LZLCMMZNID9SJK01SKK0QOZKCLTP302IW-LGLYP40WISHCJ-T9493INNO229AKLFPT93UWJFKT0493NK-GPT93U2SKFP492UEJOT0E8WIWXKKGP3JQGZXYUF932BSGYF8RPTPLGJDHWUE7RITKXNSHWITOTKDHUWIR"
+local ValidKey = "LOCAL-HUB-ACCESS-KEY_9DJ2OEJIW-SK919KFI2KSHK119KDIQLSK91LZLCMMZNID9SJK01SKK0QOZKCLTP302IW-LGLYP40WISHCJ-T9493INNO229AKLFPT93UWJFKT0493NK-GPT93U2SKFP492UEJOT0E8WIWXKKGP3JQGZXYUF932BSGYF8RPTPLGJDHWUE7RITKXNSHWITOTKDHUWIR"
 
 EnterButton.MouseButton1Click:Connect(function()
     local entered = (TextBox.Text or ""):gsub("^%s*(.-)%s*$", "%1")
@@ -108,6 +108,36 @@ EnterButton.MouseButton1Click:Connect(function()
         notif("Local Hub", "Invalid Key!")
     end
 end)
+
+local DiscordButton = Instance.new("TextButton")
+DiscordButton.Size = UDim2.new(0.6, 0, 0, 35)
+DiscordButton.Position = UDim2.new(0.2, 0, 0.55, 0)
+DiscordButton.Text = "Copy Discord Link"
+DiscordButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+DiscordButton.BackgroundColor3 = Color3.fromRGB(72, 50, 255)
+DiscordButton.Font = Enum.Font.GothamBold
+DiscordButton.TextSize = 16
+DiscordButton.Parent = Frame
+
+local UICornerDiscord = Instance.new("UICorner")
+UICornerDiscord.CornerRadius = UDim.new(0, 10)
+UICornerDiscord.Parent = DiscordButton
+
+DiscordButton.MouseButton1Click:Connect(function()
+    setclipboard("https://discord.gg/XXtB3Vth53")
+    notif("Local Hub", "Discord Link copied to clipboard")
+end)
+
+local Instructions = Instance.new("TextLabel")
+Instructions.Size = UDim2.new(0.9, 0, 0.2, 0)
+Instructions.Position = UDim2.new(0.05, 0, 0.72, 0)
+Instructions.BackgroundTransparency = 1
+Instructions.Text = "How to get key?\nCopy Discord Link, Join our discord server, go to the \"🔑︱Keys\" channel, copy the key and enjoy!"
+Instructions.TextColor3 = Color3.fromRGB(255, 255, 255)
+Instructions.TextWrapped = true
+Instructions.TextScaled = true
+Instructions.Font = Enum.Font.Gotham
+Instructions.Parent = Frame
 
 local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Quint, Enum.EasingDirection.Out)
 local tweenGoal = {Position = UDim2.new(0.5, 0, 0.5, 0)}
