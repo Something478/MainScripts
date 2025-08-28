@@ -118,6 +118,12 @@ ReadTab:CreateParagraph({
     })
 end
 
+ReadTab:CreateParagraph({
+    Title = "🌌︱Default Theme",
+    Content = "Theme = Outer Space [Blue]\nTheme made by Theo."
+    })
+end
+
 ReadTab:CreateSection("Info")
 
 ReadTab:CreateParagraph({
@@ -137,6 +143,13 @@ HomeTab:CreateButton({
     Name = "Sit",
     Callback = function()
             TextChat.TextChannels.RBXGeneral:SendAsync("/e -sit")
+        end,
+    })
+
+HomeTab:CreateButton({
+    Name = "Spawn Dummy",
+    Callback = function()
+            TextChat.TextChannels.RBXGeneral:SendAsync("/e -dummy")
         end,
     })
 
