@@ -97,6 +97,55 @@ if Place == 17574618959 or Place == 88308889239232 then
             TextChat.TextChannels.RBXGeneral:SendAsync("/e -sit")
         end,
     })
+
+    HomeTab:CreateButton({
+        Name = "Spawn Dummy",
+        Callback = function()
+            TextChat.TextChannels.RBXGeneral:SendAsync("/e -dummy")
+        end,
+    })
+
+    HomeTab:CreateButton({
+        Name = "Net (AntiFall for hats)",
+        Callback = function()
+            TextChat.TextChannels.RBXGeneral:SendAsync("/e -net")
+        end,
+    })
+
+    HomeTab:CreateButton({
+        Name = "Save hats",
+        Callback = function()
+            TextChat.TextChannels.RBXGeneral:SendAsync("/e -sh")
+        end,
+    })
+
+    HomeTab:CreateButton({
+        Name = "Clear hats",
+        Callback = function()
+            TextChat.TextChannels.RBXGeneral:SendAsync("/e -ch")
+        end,
+    })
+
+    HomeTab:CreateButton({
+        Name = "Respawn",
+        Callback = function()
+            TextChat.TextChannels.RBXGeneral:SendAsync("/e -rs")
+        end,
+    })
+
+    HomeTab:CreateButton({
+        Name = "Force Respawn",
+        Callback = function()
+            TextChat.TextChannels.RBXGeneral:SendAsync("/e -re")
+        end,
+    })
+
+    HomeTab:CreateButton({
+        Name = "PermaDeath",
+        Callback = function()
+            TextChat.TextChannels.RBXGeneral:SendAsync("/e -pd")
+        end,
+    })
 end
 
 local Toggle = HomeTab:CreateToggle({
@@ -495,49 +544,6 @@ if Place == 88308889239232 or Place == 17574618959 then
 -- /// Other Tab
 
 local EtcTab = Window:CreateTab("Other")
-
-EtcTab:CreateButton({
-    Name = "PermaDeath",
-    Callback = function()
-    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -pd")
-        end
-    })
-EtcTab:CreateButton({
-    Name = "Respawn",
-    Callback = function()
-    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -rs")
-        end
-    })
-EtcTab:CreateButton({
-    Name = "Force Respawn",
-    Callback = function()
-    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -re")
-        end
-    })
-EtcTab:CreateButton({
-    Name = "Save hats",
-    Callback = function()
-    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -sh")
-        end
-    })
-EtcTab:CreateButton({
-    Name = "Clear hats",
-    Callback = function()
-    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -ch")
-        end
-    })
-EtcTab:CreateButton({
-    Name = "Net (AntiFall for hats)",
-    Callback = function()
-    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -net")
-        end
-    })
-EtcTab:CreateButton({
-    Name = "Spawn Dummy",
-    Callback = function()
-    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -dummy")
-        end
-    })
 
 EtcTab:CreateSection("Avatars")
 
