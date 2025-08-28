@@ -144,7 +144,7 @@ KeyGuideCorner.CornerRadius = UDim.new(0, 10)
 KeyGuideCorner.Parent = KeyGuideButton
 
 KeyGuideButton.MouseButton1Click:Connect(function()
-    notif("Key Instructions", "Join Discord server, go to '🔑︱Keys channel,' copy and paste the key.")
+    notif("Key Instructions", "Join Discord server, go to 🔑︱Keys channel, copy and paste the key.")
 end)
 
 local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Quint, Enum.EasingDirection.Out)
