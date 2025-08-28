@@ -5,13 +5,7 @@ local RunService = game:GetService("RunService")
 local HttpService = game:GetService("HttpService")
 local TextChat = game:GetService("TextChatService")
 
--- /// Rayfield
-local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
-local Window = Rayfield:CreateWindow({
-    Name = "Local Hub",
-    LoadingTitle = "Local Hub",
-    LoadingSubtitle = "By ChillbyteHD",
-    Theme = {
+local CustomTheme = {
     TextColor = Color3.fromRGB(255, 255, 255),
     Background = Color3.fromRGB(0, 0, 0),
     Topbar = Color3.fromRGB(0, 0, 0),
@@ -42,8 +36,15 @@ local Window = Rayfield:CreateWindow({
     DropdownUnselected = Color3.fromRGB(0, 0, 0),
     InputBackground = Color3.fromRGB(0, 0, 0),
     InputStroke = Color3.fromRGB(0, 0, 255),
-    PlaceholderColor = Color3.fromRGB(0, 0, 255)
-    },
+    PlaceholderColor = Color3.fromRGB(0, 0, 255)}
+
+-- /// Rayfield
+local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
+local Window = Rayfield:CreateWindow({
+    Name = "Local Hub",
+    LoadingTitle = "Local Hub",
+    LoadingSubtitle = "By ChillbyteHD",
+    Theme = "CustomTheme"
     ToggleUIKeybind = Enum.KeyCode.B,
     DisableRayfieldPrompts = false,
     DisableBuildWarnings = false,
