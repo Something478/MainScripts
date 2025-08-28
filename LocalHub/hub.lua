@@ -92,11 +92,12 @@ local Place = game.PlaceId
 local ReadTab = Window:CreateTab("READ")
 
 if Place ~= 88308889239232 and Place ~= 17574618959 then
-    ReadTab:CreateParagraph({
-        Title = "❗︱Game Not Supported",
-        Content = "Some features from this hub are removed."
+
+ReadTab:CreateParagraph({
+    Title = "❗︱Game Not Supported",
+    Content = "Some features from this hub are removed."
     })
-    HomeTab:CreateDivider()
+    ReadTab:CreateDivider()
 end
 
 ReadTab:CreateParagraph({
@@ -105,9 +106,10 @@ ReadTab:CreateParagraph({
 })
 
 if Place == 88308889239232 or Place == 17574618959 then
-    ReadTab:CreateParagraph({
-        Title = "How to use this hub? 🤔",
-        Content = "If you're gonna use genesis, go to the Genesis rigs tab, once your done loading the hats and rigs, head to the Genesis tab and execute the scripts there!!1!"
+
+ReadTab:CreateParagraph({
+    Title = "How to use this hub? 🤔",
+    Content = "If you're gonna use genesis, go to the Genesis rigs tab, once your done loading the hats and rigs, head to the Genesis tab and execute the scripts there!!1!"
     })
 
 ReadTab:CreateSection("Other")
@@ -444,47 +446,47 @@ MainTab:CreateButton({
 
 -- /// My Tab
 
-local myTab = Window:CreateTab("Made by me")
-myTab:CreateSection("GUIs")
+local MyTab = Window:CreateTab("Made by me")
+MyTab:CreateSection("GUIs")
 
-myTab:CreateButton({
+MyTab:CreateButton({
     Name = "Kill Gui",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/KillGUI.lua"))()
     end
 })
 
-myTab:CreateButton({
+MyTab:CreateButton({
     Name = "Dupe Gui",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/DupeGUI.lua"))()
     end
 })
 
-myTab:CreateParagraph({
+MyTab:CreateParagraph({
     Title = "Note",
     Content = "Kill GUI & Dupe GUI needs R6 & a Roblox Gear (Item), without a gear it won't work.\nExample gear: Bloxy cola."
 })
 
-myTab:CreateSection("Reanimation")
+MyTab:CreateSection("Reanimation")
 
-myTab:CreateButton({
+MyTab:CreateButton({
     Name = "Giant Krystal Dance",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/GiantKD.lua"))()
     end
 })
 
-myTab:CreateSection("BetterRoblox")
+MyTab:CreateSection("BetterRoblox")
 
-myTab:CreateButton({
+MyTab:CreateButton({
     Name = "Realistic Mode (1st person)",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/RealisticMode.lua"))()
     end
 })
 
-myTab:CreateButton({
+MyTab:CreateButton({
     Name = "Inventory",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/Inventory.lua"))()
@@ -493,41 +495,41 @@ myTab:CreateButton({
 
 -- /// Keyboards tab
 
-local keyTab = Window:CreateTab("Keyboards")
+local KeyTab = Window:CreateTab("Keyboards")
 
-keyTab:CreateSection("My keyboards")
+KeyTab:CreateSection("My keyboards")
 
-keyTab:CreateButton({
+KeyTab:CreateButton({
     Name = "Byte Keyboard",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/ByteKeyboard.lua"))()
     end
 })
 
-keyTab:CreateButton({
+KeyTab:CreateButton({
     Name = "Kilobyte Keyboard",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/KilobyteKeyboard.lua"))()
     end
 })
 
-keyTab:CreateSection("Other keyboards")
+KeyTab:CreateSection("Other keyboards")
 
-keyTab:CreateButton({
+KeyTab:CreateButton({
     Name = "Delta Keyboard",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Xxtan31/Ata/main/deltakeyboardcrack.txt"))()
     end
 })
 
-keyTab:CreateButton({
+KeyTab:CreateButton({
     Name = "Virtual Keyboard",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/uuuuuuu/refs/heads/main/VirtualKeyboard.lua"))()
     end
 })
 
-keyTab:CreateButton({
+KeyTab:CreateButton({
     Name = "Mob Keyboard",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
@@ -538,16 +540,16 @@ if Place == 88308889239232 or Place == 17574618959 then
 
 -- /// PermaDeath tab
 
-local pdTab = Window:CreateTab("PermaDeath")
+local PdTab = Window:CreateTab("PermaDeath")
 
-pdTab:CreateButton({
+PdTab:CreateButton({
     Name = "Krystal Dance",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/KrystalDance.lua"))()
         end
     })
 
-pdTab:CreateParagraph({
+PdTab:CreateParagraph({
     Title = "Credits",
     Content = "To MrY7zz for fixed KDV3, and to MZHA on scriptblox for working reanimation."
     })
