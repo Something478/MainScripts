@@ -29,13 +29,17 @@ local preventToolsEnabled = false
 local toolFriend = nil
 local charFriend = nil
 
-function setupToolListener(char)
+local function getHumanoid(char)
+    return char:FindFirstChildOfClass("Humanoid")
+end
+
+local function setupToolListener(char)
     if toolFriend then
         toolFriend:Disconnect()
     end
     toolFriend = char.ChildAdded:Connect(function(child)
         if preventToolsEnabled and child:IsA("Tool") then
-            local humanoid = char:FindFirstChildOfClass("Humanoid")
+            local humanoid = getHumanoid(char)
             if humanoid then
                 humanoid:UnequipTools()
             end
@@ -43,7 +47,7 @@ function setupToolListener(char)
     end)
 end
 
-function onCharacterAdded(char)
+local function onCharacterAdded(char)
     setupToolListener(char)
 end
 
@@ -56,7 +60,6 @@ charFriend = player.CharacterAdded:Connect(onCharacterAdded)
 local Place = game.PlaceId
 
 -- /// Home Tab
-
 local HomeTab = Window:CreateTab("Home")
 
 if Place ~= 88308889239232 and Place ~= 17574618959 then
@@ -73,10 +76,10 @@ HomeTab:CreateParagraph({
 })
 
 if Place == 88308889239232 or Place == 17574618959 then
-HomeTab:CreateParagraph({
-    Title = "Shortcut",
-    Content = "+︱Needs a keyboard & will have keybinds\n-︱Doesn't need a keyboard & will not have keybinds"
-})
+    HomeTab:CreateParagraph({
+        Title = "Shortcut",
+        Content = "+︱Needs a keyboard & will have keybinds\n-︱Doesn't need a keyboard & will not have keybinds"
+    })
 end
 
 HomeTab:CreateSection("Info")
@@ -90,65 +93,39 @@ HomeTab:CreateParagraph({
 })
 HomeTab:CreateDivider()
 
-if Place == 17574618959 or Place == 88308889239232 then
-    HomeTab:CreateButton({
-        Name = "Sit",
-        Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("/e -sit")
-        end,
-    })
-
-    HomeTab:CreateButton({
-        Name = "Spawn Dummy",
-        Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("/e -dummy")
-        end,
-    })
-
-    HomeTab:CreateButton({
-        Name = "Net (AntiFall for hats)",
-        Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("/e -net")
-        end,
-    })
-
-    HomeTab:CreateButton({
-        Name = "Save hats",
-        Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("/e -sh")
-        end,
-    })
-
-    HomeTab:CreateButton({
-        Name = "Clear hats",
-        Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("/e -ch")
-        end,
-    })
-
-    HomeTab:CreateButton({
-        Name = "Respawn",
-        Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("/e -rs")
-        end,
-    })
-
-    HomeTab:CreateButton({
-        Name = "Force Respawn",
-        Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("/e -re")
-        end,
-    })
-
-    HomeTab:CreateButton({
-        Name = "PermaDeath",
-        Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("/e -pd")
-        end,
-    })
+-- /// Safe SendAsync function
+local function safeSendAsync(msg)
+    local channel = TextChat.TextChannels:FindFirstChild("RBXGeneral")
+    if channel then
+        pcall(function()
+            channel:SendAsync(msg)
+        end)
+    end
 end
 
-local Toggle = HomeTab:CreateToggle({
+if Place == 17574618959 or Place == 88308889239232 then
+    local buttons = {
+        {"Sit", "-sit"},
+        {"Spawn Dummy", "-dummy"},
+        {"Net (AntiFall for hats)", "-net"},
+        {"Save hats", "-sh"},
+        {"Clear hats", "-ch"},
+        {"Respawn", "-rs"},
+        {"Force Respawn", "-re"},
+        {"PermaDeath", "-pd"}
+    }
+
+    for _, v in ipairs(buttons) do
+        HomeTab:CreateButton({
+            Name = v[1],
+            Callback = function()
+                safeSendAsync("/e "..v[2])
+            end
+        })
+    end
+end
+
+HomeTab:CreateToggle({
     Name = "Prevent tools",
     CurrentValue = false,
     Flag = "PreventToolsToggle",
@@ -158,7 +135,7 @@ local Toggle = HomeTab:CreateToggle({
         if char then
             local tool = char:FindFirstChildOfClass("Tool")
             if tool and preventToolsEnabled then
-                local humanoid = char:FindFirstChildOfClass("Humanoid")
+                local humanoid = getHumanoid(char)
                 if humanoid then
                     humanoid:UnequipTools()
                 end
@@ -167,7 +144,7 @@ local Toggle = HomeTab:CreateToggle({
     end
 })
 
-local Slider = HomeTab:CreateSlider({
+HomeTab:CreateSlider({
     Name = "WalkSpeed Slider",
     Range = {16, 350},
     Increment = 1,
@@ -175,11 +152,15 @@ local Slider = HomeTab:CreateSlider({
     CurrentValue = 16,
     Flag = "sliderws",
     Callback = function(Value)
-        player.Character.Humanoid.WalkSpeed = Value
-    end,
+        local char = player.Character
+        local humanoid = char and getHumanoid(char)
+        if humanoid then
+            humanoid.WalkSpeed = Value
+        end
+    end
 })
 
-local Slider2 = HomeTab:CreateSlider({
+HomeTab:CreateSlider({
     Name = "JumpPower Slider",
     Range = {50, 400},
     Increment = 1,
@@ -187,17 +168,26 @@ local Slider2 = HomeTab:CreateSlider({
     CurrentValue = 50,
     Flag = "sliderjp",
     Callback = function(Value)
-        player.Character.Humanoid.JumpPower = Value
-    end,
+        local char = player.Character
+        local humanoid = char and getHumanoid(char)
+        if humanoid then
+            humanoid.JumpPower = Value
+        end
+    end
 })
 
-local Input = HomeTab:CreateInput({
+HomeTab:CreateInput({
     Name = "Walkspeed",
     PlaceholderText = "1-500",
     RemoveTextAfterFocusLost = true,
     Callback = function(Text)
-        player.Character.Humanoid.WalkSpeed = tonumber(Text) or 16
-    end,
+        local val = tonumber(Text) or 16
+        local char = player.Character
+        local humanoid = char and getHumanoid(char)
+        if humanoid then
+            humanoid.WalkSpeed = val
+        end
+    end
 })
 
 -- /// Themes Section
