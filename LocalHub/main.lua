@@ -89,9 +89,7 @@ local function checkKey()
     local entered = (TextBox.Text or ""):gsub("^%s*(.-)%s*$", "%1")
     if entered:lower() == ValidKey:lower() then
         Frame:Destroy()
-        notif("Local Hub","Valid key!")
-        task.wait(0.5)
-        notif("Local Hub","Loading hub...")
+        notif("Local Hub","Valid key, now loading Local Hub...")
         loadHub()
     else
         notif("Local Hub","Invalid Key!")
