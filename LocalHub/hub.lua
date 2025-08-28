@@ -124,7 +124,6 @@ ReadTab:CreateParagraph({
     Title = "🌌︱Default Theme",
     Content = "Theme = Outer Space [Blue]\nTheme made by Theo."
     })
-end
 
 ReadTab:CreateSection("Info")
 
