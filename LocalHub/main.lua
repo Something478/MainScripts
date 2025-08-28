@@ -26,15 +26,8 @@ end
 local function loadHub()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/Blacklist.lua"))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/main/DevTag.lua"))()
-
-    local success = pcall(function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MainScripts/refs/heads/main/LocalHub/hub.lua"))()
     end)
-
-    if not success then
-        notif("Local Hub", "Currently Local Hub is down, sorry")
-    end
-end
 
 for _, name in ipairs(BypassUsers) do
     if Player.Name == name then
