@@ -718,3 +718,10 @@ HatsTab:CreateButton({
     end
 })
 end
+
+local ChTab = Window:CreateTab("ChangeLog")
+
+ChTab:CreateParagraph({
+    Title = "Changelog 2.1",
+    Content = "Added Motorcycle."
+})
