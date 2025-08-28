@@ -767,7 +767,7 @@ HatsTab:CreateButton({
 HatsTab:CreateButton({
    Name = "Ban Hammer",
    Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("-gh 15548314241")
+            TextChat.TextChannels.RBXGeneral:SendAsync("-gh 15548314241 ")
     end
 })
 
