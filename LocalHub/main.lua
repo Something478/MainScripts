@@ -81,20 +81,32 @@ UICornerButton.Parent = EnterButton
 
 local ValidKey = "LOCAL-HUB-ACCESS-KEY--2025--9DJ2OEJIW-SK919KFI2KSHK119KDIQLSK91LZLCMMZNID9SJK01SKK0QOZKCLTP302IW-LGLYP40WISHCJ-T9493INNO229AKLFPT93UWJFKT0493NK-GPT93U2SKFP492UEJOT0E8WIWXKKGP3JQGZXYUF932BSGYF8RPTPLGJDHWUE7RITKXNSHWITOTKDHUWIR"
 
-local function notif(title,text)
-    StarterGui:SetCore("SendNotification",{Title=title,Text=text,Duration=5})
+local function notif(title, text)
+    StarterGui:SetCore("SendNotification", {
+        Title = title,
+        Text = text,
+        Duration = 5
+    })
 end
 
 local function checkKey()
     local entered = (TextBox.Text or ""):gsub("^%s*(.-)%s*$", "%1")
     if entered:lower() == ValidKey:lower() then
         Frame:Destroy()
-        notif("Local Hub","Valid key, now loading Local Hub...")
+        notif("Local Hub", "Valid key found, now loading Local Hub...")
         loadHub()
     else
-        notif("Local Hub","Invalid Key!")
+        notif("Local Hub", "Invalid Key!")
     end
 end
+
+pcall(function()
+    local clip = tostring(readclipboard() or "")
+    if clip:lower():find(ValidKey:lower()) then
+        TextBox.Text = ValidKey
+        checkKey()
+    end
+end)
 
 EnterButton.MouseButton1Click:Connect(checkKey)
 
@@ -114,7 +126,7 @@ DiscordCorner.Parent = DiscordButton
 
 DiscordButton.MouseButton1Click:Connect(function()
     setclipboard("https://discord.gg/XXtB3Vth53")
-    notif("Discord","Link copied to clipboard!")
+    notif("Discord", "Link copied to clipboard!")
 end)
 
 local KeyGuideButton = Instance.new("TextButton")
@@ -132,10 +144,10 @@ KeyGuideCorner.CornerRadius = UDim.new(0, 10)
 KeyGuideCorner.Parent = KeyGuideButton
 
 KeyGuideButton.MouseButton1Click:Connect(function()
-    notif("Key Instructions","Join Discord server, go to 🔑︱Keys channel, copy and paste the key.")
+    notif("Key Instructions", "Join Discord server, go to 🔑︱Keys channel, copy and paste the key.")
 end)
 
 local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Quint, Enum.EasingDirection.Out)
-local tweenGoal = {Position=UDim2.new(0.5,0,0.5,0)}
+local tweenGoal = {Position = UDim2.new(0.5, 0, 0.5, 0)}
 local tween = TweenService:Create(Frame, tweenInfo, tweenGoal)
 tween:Play()
