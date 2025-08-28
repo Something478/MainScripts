@@ -3,7 +3,6 @@ local Players = game:GetService("Players")
 local StarterGui = game:GetService("StarterGui")
 local RunService = game:GetService("RunService")
 local HttpService = game:GetService("HttpService")
-local TextChat = game:GetService("TextChatService")
 
 -- /// Rayfield
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
@@ -12,38 +11,38 @@ local Window = Rayfield:CreateWindow({
     LoadingTitle = "Local Hub",
     LoadingSubtitle = "By ChillbyteHD",
     Theme = {
-    TextColor = Color3.fromRGB(255, 255, 255),
-    Background = Color3.fromRGB(0, 0, 0),
-    Topbar = Color3.fromRGB(0, 0, 0),
-    Shadow = Color3.fromRGB(0, 0, 0),
-    NotificationBackground = Color3.fromRGB(0, 0, 0),
-    NotificationActionsBackground = Color3.fromRGB(0, 0, 125),
-    TabBackground = Color3.fromRGB(0, 0, 0),
-    TabStroke = Color3.fromRGB(0, 0, 255),
-    TabBackgroundSelected = Color3.fromRGB(0, 0, 133),
-    TabTextColor = Color3.fromRGB(255, 255, 255),
-    SelectedTabTextColor = Color3.fromRGB(255, 255, 255),
-    ElementBackground = Color3.fromRGB(15, 15, 15),
-    ElementBackgroundHover = Color3.fromRGB(40, 40, 40),
-    SecondaryElementBackground = Color3.fromRGB(0, 0, 0),
-    ElementStroke = Color3.fromRGB(0, 0, 150),
-    SecondaryElementStroke = Color3.fromRGB(0, 0, 255),
-    SliderBackground = Color3.fromRGB(0, 0, 0),
-    SliderProgress = Color3.fromRGB(0, 0, 255),
-    SliderStroke = Color3.fromRGB(0, 0, 255),
-    ToggleBackground = Color3.fromRGB(0, 0, 130),
-    ToggleEnabled = Color3.fromRGB(0, 0, 255),
-    ToggleDisabled = Color3.fromRGB(0, 0, 120),
-    ToggleEnabledStroke = Color3.fromRGB(0, 0, 140),
-    ToggleDisabledStroke = Color3.fromRGB(0, 0, 120),
-    ToggleEnabledOuterStroke = Color3.fromRGB(0, 0, 120),
-    ToggleDisabledOuterStroke = Color3.fromRGB(0, 0, 90),
-    DropdownSelected = Color3.fromRGB(0, 0, 255),
-    DropdownUnselected = Color3.fromRGB(0, 0, 0),
-    InputBackground = Color3.fromRGB(0, 0, 0),
-    InputStroke = Color3.fromRGB(0, 0, 255),
-    PlaceholderColor = Color3.fromRGB(0, 0, 255)
-},
+        TextColor = Color3.fromRGB(255, 255, 255),
+        Background = Color3.fromRGB(0, 0, 0),
+        Topbar = Color3.fromRGB(0, 0, 0),
+        Shadow = Color3.fromRGB(0, 0, 0),
+        NotificationBackground = Color3.fromRGB(0, 0, 0),
+        NotificationActionsBackground = Color3.fromRGB(0, 0, 125),
+        TabBackground = Color3.fromRGB(0, 0, 0),
+        TabStroke = Color3.fromRGB(0, 0, 255),
+        TabBackgroundSelected = Color3.fromRGB(0, 0, 133),
+        TabTextColor = Color3.fromRGB(255, 255, 255),
+        SelectedTabTextColor = Color3.fromRGB(255, 255, 255),
+        ElementBackground = Color3.fromRGB(15, 15, 15),
+        ElementBackgroundHover = Color3.fromRGB(40, 40, 40),
+        SecondaryElementBackground = Color3.fromRGB(0, 0, 0),
+        ElementStroke = Color3.fromRGB(0, 0, 150),
+        SecondaryElementStroke = Color3.fromRGB(0, 0, 255),
+        SliderBackground = Color3.fromRGB(0, 0, 0),
+        SliderProgress = Color3.fromRGB(0, 0, 255),
+        SliderStroke = Color3.fromRGB(0, 0, 255),
+        ToggleBackground = Color3.fromRGB(0, 0, 130),
+        ToggleEnabled = Color3.fromRGB(0, 0, 255),
+        ToggleDisabled = Color3.fromRGB(0, 0, 120),
+        ToggleEnabledStroke = Color3.fromRGB(0, 0, 140),
+        ToggleDisabledStroke = Color3.fromRGB(0, 0, 120),
+        ToggleEnabledOuterStroke = Color3.fromRGB(0, 0, 120),
+        ToggleDisabledOuterStroke = Color3.fromRGB(0, 0, 90),
+        DropdownSelected = Color3.fromRGB(0, 0, 255),
+        DropdownUnselected = Color3.fromRGB(0, 0, 0),
+        InputBackground = Color3.fromRGB(0, 0, 0),
+        InputStroke = Color3.fromRGB(0, 0, 255),
+        PlaceholderColor = Color3.fromRGB(0, 0, 255)
+    },
     ToggleUIKeybind = Enum.KeyCode.B,
     DisableRayfieldPrompts = false,
     DisableBuildWarnings = false,
@@ -88,14 +87,12 @@ charFriend = player.CharacterAdded:Connect(onCharacterAdded)
 local Place = game.PlaceId
 
 -- /// Read Tab
-
 local ReadTab = Window:CreateTab("READ")
 
 if Place ~= 88308889239232 and Place ~= 17574618959 then
-
-ReadTab:CreateParagraph({
-    Title = "❗︱Game Not Supported",
-    Content = "Some features from this hub are removed."
+    ReadTab:CreateParagraph({
+        Title = "❗︱Game Not Supported",
+        Content = "Some features from this hub are removed."
     })
     ReadTab:CreateDivider()
 end
@@ -106,7 +103,7 @@ ReadTab:CreateParagraph({
 })
 
 if Place == 88308889239232 or Place == 17574618959 then
-
+ 
 ReadTab:CreateParagraph({
     Title = "How to use this hub? 🤔",
     Content = "If you're gonna use genesis, go to the Genesis rigs tab, once your done loading the hats and rigs, head to the Genesis tab and execute the scripts there!!1!"
@@ -123,10 +120,9 @@ end
 ReadTab:CreateParagraph({
     Title = "🌌︱Default Theme",
     Content = "Theme = Outer Space [Blue]\nTheme made by Theo."
-    })
+})
 
 ReadTab:CreateSection("Info")
-
 ReadTab:CreateParagraph({
     Title = "ℹ️︱Roblox Username",
     Content = "IdkMyNameBro_012"
@@ -136,52 +132,47 @@ ReadTab:CreateParagraph({
     Content = "ChillbyteHD"
 })
 
+-- /// Home Tab
 local HomeTab = Window:CreateTab("Home")
 
 if Place == 17574618959 or Place == 88308889239232 then
-
-HomeTab:CreateButton({
-    Name = "Sit",
-    Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("/e -sit")
-        end,
+    HomeTab:CreateButton({
+        Name = "Sit",
+        Callback = function()
+            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -sit")
+        end
     })
-
-HomeTab:CreateButton({
-    Name = "Spawn Dummy",
-    Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("/e -dummy")
-        end,
+    HomeTab:CreateButton({
+        Name = "Spawn Dummy",
+        Callback = function()
+            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -dummy")
+        end
     })
-
-HomeTab:CreateButton({
-   Name = "Respawn",
-   Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("/e -re")
-    end
-})
-
-HomeTab:CreateButton({
-    Name = "Remove Hats",
-    Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("/e -ch")
-    end
-})
-
-HomeTab:CreateButton({
-   Name = "Save hats",
-   Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("/e -sh")
-    end
-})
-HomeTab:CreateButton({
-    Name = "PermaDeath",
-    Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("/e -pd")
-    end
-})
+    HomeTab:CreateButton({
+        Name = "Respawn",
+        Callback = function()
+            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -re")
+        end
+    })
+    HomeTab:CreateButton({
+        Name = "Remove Hats",
+        Callback = function()
+            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -ch")
+        end
+    })
+    HomeTab:CreateButton({
+        Name = "Save hats",
+        Callback = function()
+            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -sh")
+        end
+    })
+    HomeTab:CreateButton({
+        Name = "PermaDeath",
+        Callback = function()
+            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -pd")
+        end
+    })
 end
-
 local Toggle = HomeTab:CreateToggle({
     Name = "Prevent tools",
     CurrentValue = false,
@@ -446,17 +437,18 @@ MainTab:CreateButton({
 -- /// My Tab
 
 local MyTab = Window:CreateTab("Made by me")
+
 MyTab:CreateSection("GUIs")
 
 MyTab:CreateButton({
-    Name = "Kill Gui",
+    Name = "Kill GUI",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/KillGUI.lua"))()
     end
 })
 
 MyTab:CreateButton({
-    Name = "Dupe Gui",
+    Name = "Dupe GUI",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/DupeGUI.lua"))()
     end
@@ -466,7 +458,6 @@ MyTab:CreateParagraph({
     Title = "Note",
     Content = "Kill GUI & Dupe GUI needs R6 & a Roblox Gear (Item), without a gear it won't work.\nExample gear: Bloxy cola."
 })
-
 MyTab:CreateSection("Reanimation")
 
 MyTab:CreateButton({
@@ -476,10 +467,10 @@ MyTab:CreateButton({
     end
 })
 
-MyTab:CreateSection("BetterRoblox")
+MyTab:CreateSection("Visual")
 
 MyTab:CreateButton({
-    Name = "Realistic Mode (1st person)",
+    Name = "Realistic Mode (1st Person)",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/RealisticMode.lua"))()
     end
@@ -496,8 +487,6 @@ MyTab:CreateButton({
 
 local KeyTab = Window:CreateTab("Keyboards")
 
-KeyTab:CreateSection("My keyboards")
-
 KeyTab:CreateButton({
     Name = "Byte Keyboard",
     Callback = function()
@@ -511,8 +500,6 @@ KeyTab:CreateButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/KilobyteKeyboard.lua"))()
     end
 })
-
-KeyTab:CreateSection("Other keyboards")
 
 KeyTab:CreateButton({
     Name = "Delta Keyboard",
@@ -558,7 +545,7 @@ PdTab:CreateParagraph({
 local GenTab = Window:CreateTab("Genesis")
 
 GenTab:CreateButton({
-    Name = "Krystal Dance",
+    Name = "+︱Krystal Dance",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Krystal%20Dance"))()
         end
@@ -572,7 +559,7 @@ GenTab:CreateParagraph({
 GenTab:CreateDivider()
 
 GenTab:CreateButton({
-    Name = "Neptunian V",
+    Name = "+︱Neptunian V",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Neptunian%20V"))()
         end
@@ -586,7 +573,7 @@ GenTab:CreateParagraph({
 GenTab:CreateDivider()
 
 GenTab:CreateButton({
-    Name = "Sin Dragon",
+    Name = "+︱Sin Dragon",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Sin%20Dragon"))()
         end
@@ -600,7 +587,7 @@ GenTab:CreateParagraph({
 GenTab:CreateDivider()
 
 GenTab:CreateButton({
-    Name = "Lightning Cannon",
+    Name = "+︱Lightning Cannon",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Lightning%20Cannon"))()
         end
@@ -614,7 +601,7 @@ GenTab:CreateParagraph({
 GenTab:CreateDivider()
 
 GenTab:CreateButton({
-    Name = "Goner",
+    Name = "+︱Goner",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Goner"))()
         end
@@ -655,7 +642,7 @@ GenTab:CreateParagraph({
 
 -- /// Rigs tab
 
-local HatsTab = Window:CreateTab("Hats and Rigs")
+local HatsTab = Window:CreateTab("Genesis rigs")
 
 HatsTab:CreateParagraph({
     Title = "IMPORTANT",
@@ -665,21 +652,21 @@ HatsTab:CreateParagraph({
 HatsTab:CreateButton({
     Name = "PermaDeath",
     Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("-pd")
+            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -pd")
     end
 })
 
 HatsTab:CreateButton({
     Name = "Remove Hats",
     Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("-ch")
+            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -ch")
     end
 })
 
 HatsTab:CreateButton({
    Name = "Respawn",
    Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("-re")
+            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -re")
     end
 })
 
@@ -700,7 +687,7 @@ HatsTab:CreateParagraph({
 HatsTab:CreateButton({
     Name = "Genesis Rigs",
     Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("-gh 138364679836274 82942681251131 140395948277978 102599402682100 90960046381276 13058406993 ")
+            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 138364679836274 82942681251131 140395948277978 102599402682100 90960046381276 13058406993 ")
     end
 })
 
@@ -711,12 +698,12 @@ HatsTab:CreateButton({
     end
 })
 
-local CustomRigs = HatsTab:CreateSection("Custom Rigs")
+HatsTab:CreateSection("Custom Rigs")
 
 HatsTab:CreateButton({
     Name = "Genesis Rigs [Noob]",
     Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("-gh 95290698984301, 84451219120140, 72292903231768, 108186273151388, 139904067056008 ")
+            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 95290698984301, 84451219120140, 72292903231768, 108186273151388, 139904067056008 ")
     end
 })
 
@@ -739,54 +726,42 @@ HatsTab:CreateDivider()
 HatsTab:CreateButton({
    Name = "Neptunian V",
    Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("-gh 5316479641")
+            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 5316479641")
     end
 })
 
 HatsTab:CreateButton({
    Name = "Sin Dragon",
    Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("-gh 117186631495734 99965319383570 132770514241770 3756389957 14864581977 150381051 4504231783")
+            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 117186631495734 99965319383570 132770514241770 3756389957 14864581977 150381051 4504231783")
     end
 })
 
 HatsTab:CreateButton({
    Name = "Lightning Cannon",
    Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("-gh 111672581230926 126145101810389 136055191177936 4504231783")
+            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 111672581230926 126145101810389 136055191177936 4504231783")
     end
 })
 
 HatsTab:CreateButton({
    Name = "Goner",
    Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("-gh 17770317484 17822722698 17822749561 17772174303 17835236579")
+            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 17770317484 17822722698 17822749561 17772174303 17835236579")
     end
 })
 
 HatsTab:CreateButton({
    Name = "Ban Hammer",
    Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("-gh 15548314241 ")
+            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 15548314241")
     end
 })
 
 HatsTab:CreateButton({
   Name = "Motorcycle",
   Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("-gh 4504231783, 11354413365, 191101707, 18209672127 ")
+            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 4504231783, 11354413365, 191101707, 18209672127 ")
     end
 })
 end
-
-local ChTab = Window:CreateTab("ChangeLog")
-
-ChTab:CreateParagraph({
-    Title = "Changelog 2.2",
-    Content = "Added Motorcycle."
-})
-
-ChTab:CreateParagraph({
-    Title = "Changelog 2.1",
-    Content = "Added BetterRoblox section"
-})
