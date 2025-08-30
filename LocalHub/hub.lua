@@ -4,6 +4,12 @@ local StarterGui = game:GetService("StarterGui")
 local RunService = game:GetService("RunService")
 local HttpService = game:GetService("HttpService")
 
+-- /// Message
+local function Send(message)
+  
+  game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(message)
+end
+
 -- /// Rayfield
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
 local Window = Rayfield:CreateWindow({
@@ -438,26 +444,6 @@ MainTab:CreateButton({
 
 local MyTab = Window:CreateTab("Made by me")
 
-MyTab:CreateSection("GUIs")
-
-MyTab:CreateButton({
-    Name = "Kill GUI",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/KillGUI.lua"))()
-    end
-})
-
-MyTab:CreateButton({
-    Name = "Dupe GUI",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/DupeGUI.lua"))()
-    end
-})
-
-MyTab:CreateParagraph({
-    Title = "Note",
-    Content = "Kill GUI & Dupe GUI needs R6 & a Roblox Gear (Item), without a gear it won't work.\nExample gear: Bloxy cola."
-})
 MyTab:CreateSection("Reanimation")
 
 MyTab:CreateButton({
@@ -545,7 +531,7 @@ PdTab:CreateParagraph({
 local GenTab = Window:CreateTab("Genesis")
 
 GenTab:CreateButton({
-    Name = "+︱Krystal Dance",
+    Name = "Krystal Dance",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Krystal%20Dance"))()
         end
@@ -559,7 +545,7 @@ GenTab:CreateParagraph({
 GenTab:CreateDivider()
 
 GenTab:CreateButton({
-    Name = "+︱Neptunian V",
+    Name = "Neptunian V",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Neptunian%20V"))()
         end
@@ -573,7 +559,7 @@ GenTab:CreateParagraph({
 GenTab:CreateDivider()
 
 GenTab:CreateButton({
-    Name = "+︱Sin Dragon",
+    Name = "Sin Dragon",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Sin%20Dragon"))()
         end
@@ -587,7 +573,7 @@ GenTab:CreateParagraph({
 GenTab:CreateDivider()
 
 GenTab:CreateButton({
-    Name = "+︱Lightning Cannon",
+    Name = "Lightning Cannon",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Lightning%20Cannon"))()
         end
@@ -601,7 +587,7 @@ GenTab:CreateParagraph({
 GenTab:CreateDivider()
 
 GenTab:CreateButton({
-    Name = "+︱Goner",
+    Name = "Goner",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Goner"))()
         end
@@ -637,7 +623,7 @@ GenTab:CreateButton({
 
 GenTab:CreateParagraph({
     Title = "Keybinds",
-    Content = "Z"
+    Content = "Z (While driving)"
 })
 
 -- /// Rigs tab
@@ -652,28 +638,28 @@ HatsTab:CreateParagraph({
 HatsTab:CreateButton({
     Name = "PermaDeath",
     Callback = function()
-            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -pd")
+            Send("/e -pd")
     end
 })
 
 HatsTab:CreateButton({
     Name = "Remove Hats",
     Callback = function()
-            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -ch")
+            Send("/e -ch")
     end
 })
 
 HatsTab:CreateButton({
    Name = "Respawn",
    Callback = function()
-            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -re")
+            Send("/e -re")
     end
 })
 
 HatsTab:CreateButton({
    Name = "Save hats",
    Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("-sh")
+            Send("/e -sh")
     end
 })
 
@@ -687,14 +673,14 @@ HatsTab:CreateParagraph({
 HatsTab:CreateButton({
     Name = "Genesis Rigs",
     Callback = function()
-            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 138364679836274 82942681251131 140395948277978 102599402682100 90960046381276 13058406993 ")
+            Send("-gh 138364679836274 82942681251131 140395948277978 102599402682100 90960046381276 13058406993 ")
     end
 })
 
 HatsTab:CreateButton({
    Name = "Genesis Rigs [Black]",
    Callback = function()
-            TextChat.TextChannels.RBXGeneral:SendAsync("-gh 131385506535381 85392395166623 129462518582032 138364679836274 12850150835 106249329428811 ")
+            Send("-gh 131385506535381 85392395166623 129462518582032 138364679836274 12850150835 106249329428811 ")
     end
 })
 
@@ -703,21 +689,21 @@ HatsTab:CreateSection("Custom Rigs")
 HatsTab:CreateButton({
     Name = "Genesis Rigs [Noob]",
     Callback = function()
-            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 95290698984301, 84451219120140, 72292903231768, 108186273151388, 139904067056008 ")
+            Send("-gh 95290698984301, 84451219120140, 72292903231768, 108186273151388, 139904067056008 ")
     end
 })
 
 HatsTab:CreateButton({ 
    Name = "Genesis Rigs [Guest]", 
    Callback = function()
-        game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 13058406993 138364679836274 131385506535381 85392395166623 129462518582032 106249329428811 108224319902592 82404150383568 100856932339214")
+        Send("-gh 13058406993 138364679836274 131385506535381 85392395166623 129462518582032 106249329428811 108224319902592 82404150383568 100856932339214")
     end
 })
 
 HatsTab:CreateButton({ 
    Name = "Genesis Rigs [1x1x1x1]", 
    Callback = function()
-        game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 131385506535381 85392395166623 129462518582032 12850150835 106249329428811 17681457649 17532925923 16296624548")
+        Send("-gh 131385506535381 85392395166623 129462518582032 12850150835 106249329428811 17681457649 17532925923 16296624548")
     end
 })
 
@@ -726,42 +712,42 @@ HatsTab:CreateDivider()
 HatsTab:CreateButton({
    Name = "Neptunian V",
    Callback = function()
-            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 5316479641")
+            Send("-gh 5316479641")
     end
 })
 
 HatsTab:CreateButton({
    Name = "Sin Dragon",
    Callback = function()
-            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 117186631495734 99965319383570 132770514241770 3756389957 14864581977 150381051 4504231783")
+            Send("-gh 117186631495734 99965319383570 132770514241770 3756389957 14864581977 150381051 4504231783")
     end
 })
 
 HatsTab:CreateButton({
    Name = "Lightning Cannon",
    Callback = function()
-            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 111672581230926 126145101810389 136055191177936 4504231783")
+            Send("-gh 111672581230926 126145101810389 136055191177936 4504231783")
     end
 })
 
 HatsTab:CreateButton({
    Name = "Goner",
    Callback = function()
-            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 17770317484 17822722698 17822749561 17772174303 17835236579")
+            Send("-gh 17770317484 17822722698 17822749561 17772174303 17835236579")
     end
 })
 
 HatsTab:CreateButton({
    Name = "Ban Hammer",
    Callback = function()
-            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 15548314241")
+            Send("-gh 15548314241")
     end
 })
 
 HatsTab:CreateButton({
   Name = "Motorcycle",
   Callback = function()
-            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 4504231783, 11354413365, 191101707, 18209672127 ")
+            Send("-gh 4504231783, 11354413365, 191101707, 18209672127 ")
     end
 })
 end
