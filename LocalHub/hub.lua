@@ -145,37 +145,37 @@ if Place == 17574618959 or Place == 88308889239232 then
     HomeTab:CreateButton({
         Name = "Sit",
         Callback = function()
-            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -sit")
+            Send("/e -sit")
         end
     })
     HomeTab:CreateButton({
         Name = "Spawn Dummy",
         Callback = function()
-            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -dummy")
+            Send("/e -dummy")
         end
     })
     HomeTab:CreateButton({
         Name = "Respawn",
         Callback = function()
-            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -re")
+            Send("/e -re")
         end
     })
     HomeTab:CreateButton({
         Name = "Remove Hats",
         Callback = function()
-            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -ch")
+            Send("/e -ch")
         end
     })
     HomeTab:CreateButton({
         Name = "Save hats",
         Callback = function()
-            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -sh")
+            Send("/e -sh")
         end
     })
     HomeTab:CreateButton({
         Name = "PermaDeath",
         Callback = function()
-            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("/e -pd")
+            Send("/e -pd")
         end
     })
 end
