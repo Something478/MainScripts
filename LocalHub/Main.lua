@@ -33,7 +33,7 @@ local BypassUsers = {
     ["IdkMyNameBro_012"] = true,
     ["Theo_TheoBenzo"] = true,
     ["yourgames9"] = true,
-    ["faroukhaddiedevelope2"] = true
+    ["faroukhaddidevelope2"] = true
 }
 
 if BypassUsers[Player.Name] then
