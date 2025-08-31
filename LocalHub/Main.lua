@@ -27,18 +27,15 @@ local function loadHub()
     safeLoad("https://raw.githubusercontent.com/Something478/MainScripts/refs/heads/main/LocalHub/hub.lua")
 end
 
--- Key
 local ValidKey = "LOCAL-HUB-ACCESS-KEY_9DJ2OEJIW-SK919KFI2KSHK119KDIQLSK91LZLCMMZNID9SJK01SKK0QOZKCLTP302IW-LGLYP40WISHCJ-T9493INNO229AKLFPT93UWJFKT0493NK-GPT93U2SKFP492UEJOT0E8WIWXKKGP3JQGZXYUF932BSGYF8RPTPLGJDHWUE7RITKXNSHWITOTKDHUWIR"
 
--- /// Skip KeySystems
 local BypassUsers = {
-    ["IdkMyNameBro_012"] = true, 
-    ["Theo_TheoBenzo"] = true, 
-    ["yourgames9"] = true  -- add more here
+    ["ChillbyteHD"] = true,
+    ["FriendName"] = true,
 }
 
 if BypassUsers[Player.Name] then
-    notif("Local Hub", "Welcome...")
+    notif("Local Hub", "Welcome, " .. Player.Name .. "! Loading hub...")
     loadHub()
     return
 end
