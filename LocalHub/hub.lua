@@ -550,7 +550,7 @@ PdTab:CreateParagraph({
   PdTab:CreateButton({
     Name = "Gelatek Reanimation (Creds to Gelatekussy)",
     Callback = function()
-           loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/GelatekReanimation.lua"))()
+           loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/Reanimate.lua"))()
         end
     })
 
