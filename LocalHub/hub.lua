@@ -525,6 +525,33 @@ PdTab:CreateParagraph({
     Title = "Credits",
     Content = "To MrY7zz for fixed KDV3, and to MZHA on scriptblox for working reanimation."
     })
+  
+PdTab:CreateDivider()
+
+PdTab:CreateParagraph({
+    Title = "Note:",
+    Content = "Use a reanimation before executing the scripts above."
+    })
+  
+  PdTab:CreateButton({
+    Name = "Just a Baseplate reanimation",
+    Callback = function()
+            loadstring(game:HttpGet("https://rawscripts.net/raw/Just-a-baseplate.-Just-A-Baseplate-Working-Reanimation-39126"))()
+        end
+    })
+  
+  PdTab:CreateButton({
+    Name = "Currentangle V2",
+    Callback = function()
+            loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-CurrentAngle-V2-Old-46018"))()
+        end
+    })
+  
+  PdTab:CreateButton({
+    Name = "Gelatek Reanimation (Creds to Gelatekussy)"
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/GelatekReanimation.lua"))()
+       end
+   })
 
 -- /// Genesis tab
 
