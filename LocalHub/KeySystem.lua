@@ -24,7 +24,7 @@ end
 local function loadHub()
     safeLoad("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/Blacklist.lua")
     safeLoad("https://raw.githubusercontent.com/Something478/ScriptLoader/main/DevTag.lua")
-    safeLoad("https://raw.githubusercontent.com/Something478/MainScripts/refs/heads/main/LocalHub/hub.lua")
+    safeLoad("https://raw.githubusercontent.com/Something478/MainScripts/refs/heads/main/LocalHub/Main.lua")
 end
 
 local ValidKey = "LOCAL-HUB-ACCESS-KEY_9DJ2OEJIW-SK919KFI2KSHK119KDIQLSK91LZLCMMZNID9SJK01SKK0QOZKCLTP302IW-LGLYP40WISHCJ-T9493INNO229AKLFPT93UWJFKT0493NK-GPT93U2SKFP492UEJOT0E8WIWXKKGP3JQGZXYUF932BSGYF8RPTPLGJDHWUE7RITKXNSHWITOTKDHUWIR"
@@ -32,8 +32,8 @@ local ValidKey = "LOCAL-HUB-ACCESS-KEY_9DJ2OEJIW-SK919KFI2KSHK119KDIQLSK91LZLCMM
 local BypassUsers = {
     ["IdkMyNameBro_012"] = true,
     ["Theo_TheoBenzo"] = true,
-    ["yourgames9"] = true,
-    ["faroukhaddidevelope2"] = true
+    ["faroukhaddidevelope2"] = true,
+    ["yourgames9"] = true
 }
 
 if BypassUsers[Player.Name] then
