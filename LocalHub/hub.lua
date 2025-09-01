@@ -490,7 +490,7 @@ KeyTab:CreateButton({
 KeyTab:CreateButton({
     Name = "Delta Keyboard",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Xxtan31/Ata/main/deltakeyboardcrack.txt"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/DeltaKeyboard.lua"))()
     end
 })
 
