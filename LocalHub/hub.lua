@@ -515,15 +515,22 @@ if Place == 88308889239232 or Place == 17574618959 then
 local PdTab = Window:CreateTab("PermaDeath")
 
 PdTab:CreateButton({
-    Name = "Krystal Dance",
+    Name = "KDV3 By MrY7zz",
     Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/KrystalDance.lua"))()
         end
     })
 
+PdTab:CreateButton({
+    Name = "KDV3 By Theo",
+    Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Solary-3/Scripts/refs/heads/main/Kdv3Fixed.lua"))()
+        end
+    })
+
 PdTab:CreateParagraph({
     Title = "Credits",
-    Content = "To MrY7zz for fixed KDV3, and to MZHA on scriptblox for working reanimation."
+    Content = "To the owners of the scripts"
     })
   
 PdTab:CreateDivider()
