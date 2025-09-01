@@ -533,12 +533,7 @@ PdTab:CreateParagraph({
     Content = "To the owners of the scripts"
     })
   
-PdTab:CreateDivider()
-
-PdTab:CreateParagraph({
-    Title = "Note:",
-    Content = "Use a reanimation before executing the scripts above."
-    })
+PdTab:CreateSection("Reanimation")
   
   PdTab:CreateButton({
     Name = "Just a Baseplate reanimation",
@@ -555,7 +550,7 @@ PdTab:CreateParagraph({
     })
   
   PdTab:CreateButton({
-    Name = "Gelatek Reanimation (Creds to Gelatekussy)",
+    Name = "Gelatek Reanimation",
     Callback = function()
            loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/Reanimate.lua"))()
         end
