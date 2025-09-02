@@ -93,7 +93,7 @@ charFriend = player.CharacterAdded:Connect(onCharacterAdded)
 local Place = game.PlaceId
 
 -- /// Read Tab
-local ReadTab = Window:CreateTab("📄READ📄")
+local ReadTab = Window:CreateTab("📄-READ-📄")
 
 if Place ~= 88308889239232 and Place ~= 17574618959 then
     ReadTab:CreateParagraph({
@@ -139,7 +139,7 @@ ReadTab:CreateParagraph({
 })
 
 -- /// Home Tab
-local HomeTab = Window:CreateTab("Home")
+local HomeTab = Window:CreateTab("🔗-Home-🔗")
 
 if Place == 17574618959 or Place == 88308889239232 then
     HomeTab:CreateButton({
@@ -512,7 +512,8 @@ if Place == 88308889239232 or Place == 17574618959 then
 
 -- /// PermaDeath tab
 
-local PdTab = Window:CreateTab("PermaDeath")
+local PdTab = Window:CreateTab("")
+
 
 PdTab:CreateButton({
     Name = "KDV3 By MrY7zz",
