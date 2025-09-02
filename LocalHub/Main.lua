@@ -387,7 +387,7 @@ HomeTab:CreateButton({
 
 -- /// Main Tab
 
-local MainTab = Window:CreateTab("Main")
+local MainTab = Window:CreateTab("🎮-Main-🎮")
 MainTab:CreateButton({
     Name = "Nameless Admin",
     Callback = function()
