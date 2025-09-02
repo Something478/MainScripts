@@ -93,7 +93,7 @@ charFriend = player.CharacterAdded:Connect(onCharacterAdded)
 local Place = game.PlaceId
 
 -- /// Read Tab
-local ReadTab = Window:CreateTab("READ")
+local ReadTab = Window:CreateTab("📄READ📄")
 
 if Place ~= 88308889239232 and Place ~= 17574618959 then
     ReadTab:CreateParagraph({
@@ -524,13 +524,13 @@ PdTab:CreateButton({
 PdTab:CreateButton({
     Name = "KDV3 By Theo",
     Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Solary-3/Scripts/refs/heads/main/Kdv3Fixed.lua"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Solary-3/Scripts/refs/heads/main/Choose.lua"))()
         end
     })
 
 PdTab:CreateParagraph({
     Title = "Credits",
-    Content = "To the owners of the scripts"
+    Content = "To the owners of the scripts :D"
     })
   
 PdTab:CreateSection("Reanimation")
