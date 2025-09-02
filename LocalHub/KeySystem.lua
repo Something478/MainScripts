@@ -32,7 +32,6 @@ local ValidKey = "LOCAL-HUB-ACCESS-KEY_9DJ2OEJIW-SK919KFI2KSHK119KDIQLSK91LZLCMM
 local BypassUsers = {
     ["IdkMyNameBro_012"] = true,
     ["Theo_TheoBenzo"] = true,
-    ["faroukhaddidevelope2"] = true,
     ["yourgames9"] = true
 }
 
