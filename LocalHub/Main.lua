@@ -93,7 +93,7 @@ charFriend = player.CharacterAdded:Connect(onCharacterAdded)
 local Place = game.PlaceId
 
 -- /// Read Tab
-local ReadTab = Window:CreateTab("📄READ📄")
+local ReadTab = Window:CreateTab("(📄) READ")
 
 if Place ~= 88308889239232 and Place ~= 17574618959 then
     ReadTab:CreateParagraph({
@@ -109,8 +109,8 @@ ReadTab:CreateParagraph({
 })
 
 ReadTab:CreateParagraph({
-    Title = "Emoji Shortcuts",
-    Content = "🔗, ⌨️ - Any Game\n🎮 - Limited to games with PermaDeath"
+    Title = "Meaning of emojis",
+    Content = "🎮 - Only supported games\n🔗 - Any game"
 })
 
 if Place == 88308889239232 or Place == 17574618959 then
@@ -144,7 +144,7 @@ ReadTab:CreateParagraph({
 })
 
 -- /// Home Tab
-local HomeTab = Window:CreateTab("🔗-Home-🔗")
+local HomeTab = Window:CreateTab("(🔗) Home")
 
 if Place == 17574618959 or Place == 88308889239232 then
     HomeTab:CreateButton({
@@ -392,7 +392,7 @@ HomeTab:CreateButton({
 
 -- /// Main Tab
 
-local MainTab = Window:CreateTab("🎮-Main-🎮")
+local MainTab = Window:CreateTab("(🔗) Main")
 MainTab:CreateButton({
     Name = "Nameless Admin",
     Callback = function()
@@ -447,12 +447,12 @@ MainTab:CreateButton({
 
 -- /// My Tab
 
-local MyTab = Window:CreateTab("🔗By Owner🔗")
+local MyTab = Window:CreateTab("(🔗) By Owner")
 
 MyTab:CreateSection("Reanimation")
 
 MyTab:CreateButton({
-    Name = "Giant Krystal Dance",
+    Name = "(🎮) Giant Krystal Dance",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/GiantKD.lua"))()
     end
@@ -476,7 +476,7 @@ MyTab:CreateButton({
 
 -- /// Keyboards tab
 
-local KeyTab = Window:CreateTab("⌨️Keyboards⌨️")
+local KeyTab = Window:CreateTab("(🔗) Keyboards")
 
 KeyTab:CreateButton({
     Name = "Byte Keyboard",
@@ -517,7 +517,7 @@ if Place == 88308889239232 or Place == 17574618959 then
 
 -- /// PermaDeath tab
 
-local PdTab = Window:CreateTab("🎮PermaDeath🎮")
+local PdTab = Window:CreateTab("(🎮) PermaDeath")
 
 
 PdTab:CreateButton({
@@ -564,7 +564,7 @@ PdTab:CreateSection("Reanimation")
 
 -- /// Genesis tab
 
-local GenTab = Window:CreateTab("🎮Genesis🎮")
+local GenTab = Window:CreateTab("(🎮) Genesis")
 
 GenTab:CreateButton({
     Name = "Krystal Dance",
@@ -664,7 +664,7 @@ GenTab:CreateParagraph({
 
 -- /// Rigs tab
 
-local HatsTab = Window:CreateTab("🎮Genesis rigs🎮")
+local HatsTab = Window:CreateTab("(🎮) Genesis rigs")
 
 HatsTab:CreateParagraph({
     Title = "IMPORTANT",
