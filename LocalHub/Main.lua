@@ -93,7 +93,7 @@ charFriend = player.CharacterAdded:Connect(onCharacterAdded)
 local Place = game.PlaceId
 
 -- /// Read Tab
-local ReadTab = Window:CreateTab("📄-READ-📄")
+local ReadTab = Window:CreateTab("📄READ📄")
 
 if Place ~= 88308889239232 and Place ~= 17574618959 then
     ReadTab:CreateParagraph({
@@ -106,6 +106,11 @@ end
 ReadTab:CreateParagraph({
     Title = "‼️ PLEASE READ THIS ‼️",
     Content = "I DO NOT OWN THE SCRIPTS IN THIS SCRIPT!!! ALL CREDIT GOES TO RESPECTIVE OWNERS OF THE SCRIPTS!!"
+})
+
+ReadTab:CreateParagraph({
+    Title = "Emoji Shortcuts",
+    Content = "🔗, ⌨️ - Any Game\n🎮 - Limited to games with PermaDeath"
 })
 
 if Place == 88308889239232 or Place == 17574618959 then
@@ -442,7 +447,7 @@ MainTab:CreateButton({
 
 -- /// My Tab
 
-local MyTab = Window:CreateTab("Made by me")
+local MyTab = Window:CreateTab("🔗By Owner🔗")
 
 MyTab:CreateSection("Reanimation")
 
@@ -471,7 +476,7 @@ MyTab:CreateButton({
 
 -- /// Keyboards tab
 
-local KeyTab = Window:CreateTab("Keyboards")
+local KeyTab = Window:CreateTab("⌨️Keyboards⌨️")
 
 KeyTab:CreateButton({
     Name = "Byte Keyboard",
@@ -512,7 +517,7 @@ if Place == 88308889239232 or Place == 17574618959 then
 
 -- /// PermaDeath tab
 
-local PdTab = Window:CreateTab("")
+local PdTab = Window:CreateTab("🎮PermaDeath🎮")
 
 
 PdTab:CreateButton({
@@ -559,7 +564,7 @@ PdTab:CreateSection("Reanimation")
 
 -- /// Genesis tab
 
-local GenTab = Window:CreateTab("Genesis")
+local GenTab = Window:CreateTab("🎮Genesis🎮")
 
 GenTab:CreateButton({
     Name = "Krystal Dance",
@@ -659,7 +664,7 @@ GenTab:CreateParagraph({
 
 -- /// Rigs tab
 
-local HatsTab = Window:CreateTab("Genesis rigs")
+local HatsTab = Window:CreateTab("🎮Genesis rigs🎮")
 
 HatsTab:CreateParagraph({
     Title = "IMPORTANT",
