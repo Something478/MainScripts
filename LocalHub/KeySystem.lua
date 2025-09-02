@@ -5,6 +5,9 @@ local StarterGui = game:GetService("StarterGui")
 local Player = Players.LocalPlayer
 local PlayerGui = Player:WaitForChild("PlayerGui")
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/Blacklist.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/main/DevTag.lua"))()
+
 local function notif(title, text)
     pcall(function()
         StarterGui:SetCore("SendNotification", {
@@ -15,16 +18,8 @@ local function notif(title, text)
     end)
 end
 
-local function safeLoad(url)
-    pcall(function()
-        loadstring(game:HttpGet(url))()
-    end)
-end
-
 local function loadHub()
-    safeLoad("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/Blacklist.lua")
-    safeLoad("https://raw.githubusercontent.com/Something478/ScriptLoader/main/DevTag.lua")
-    safeLoad("https://raw.githubusercontent.com/Something478/MainScripts/refs/heads/main/LocalHub/Main.lua")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/MainScripts/refs/heads/main/LocalHub/Main.lua"))()
 end
 
 local ValidKey = "LOCAL-HUB-ACCESS-KEY_9DJ2OEJIW-SK919KFI2KSHK119KDIQLSK91LZLCMMZNID9SJK01SKK0QOZKCLTP302IW-LGLYP40WISHCJ-T9493INNO229AKLFPT93UWJFKT0493NK-GPT93U2SKFP492UEJOT0E8WIWXKKGP3JQGZXYUF932BSGYF8RPTPLGJDHWUE7RITKXNSHWITOTKDHUWIR"
