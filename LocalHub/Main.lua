@@ -140,7 +140,7 @@ ReadTab:CreateParagraph({
 })
 ReadTab:CreateParagraph({
     Title = "ℹ️︱Discord Username",
-    Content = "ChillbyteHD"
+    Content = "PlasmaByte_"
 })
 
 -- /// Home Tab
