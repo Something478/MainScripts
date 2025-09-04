@@ -4,6 +4,17 @@ local StarterGui = game:GetService("StarterGui")
 local RunService = game:GetService("RunService")
 local HttpService = game:GetService("HttpService")
 
+local Wait = task.wait
+
+-- /// Notify
+function notify(title, text, duration)
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = title,
+        Text = text,
+        Duration = duration or 5
+    })
+end
+
 -- /// Message
 local function Send(message)
   
@@ -521,9 +532,16 @@ local PdTab = Window:CreateTab("(🎮) PermaDeath")
 
 
 PdTab:CreateButton({
-    Name = "KDV3 By MrY7zz",
+    Name = "Fixed Krystal Dance V3",
     Callback = function()
+      notify("Krystal Dance V3", "Made by NITRO-GT")
+      Wait(0.1)
+      notify("Krystal Dance V3", "Fixed by MrY7zz")
+      Wait(0.1)
+      notify("Krystal Dance V3", "Credits goes to them!")
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/KrystalDance.lua"))()
+            Wait(0.1)
+            notify("Krystal Dance V3", "Loaded, Enjoy!")
         end
     })
 
