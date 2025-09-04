@@ -6,7 +6,7 @@ local Player = Players.LocalPlayer
 local PlayerGui = Player:WaitForChild("PlayerGui")
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/Blacklist.lua"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/main/Tag.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/ScriptLoader/refs/heads/main/Tag.lua"))()
 
 local function notif(title, text)
     pcall(function()
