@@ -7,7 +7,7 @@ local PlayerGui = Player:WaitForChild("PlayerGui")
 
 -- /// DevTools
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/DevTools/refs/heads/main/Blacklist.lua"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/DevTools/refs/heads/main/Tag"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Something478/DevTools/refs/heads/main/Tag.lua"))()
 
 local function notif(title, text)
     pcall(function()
